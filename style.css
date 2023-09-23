@@ -236,7 +236,6 @@ p {
     position: relative;
     padding: 100px;
     background: #20242d;
-
 }
 .sec h2
 {
@@ -337,18 +336,20 @@ p {
     }
 }
 
+@media (max-width: 1210px) {
 
-@media (max-width: 400px) {
-    .sec
+    .parallax
     {
     position: relative;
-    padding: 40px;
-    background: #20242d;
-
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+}
 }
 
-@media (max-width: 1180px){
+@media (max-width: 1180px) {
     .parallax
     {
     overflow-y: hidden;
@@ -357,10 +358,16 @@ p {
     justify-content: center;
     align-items: center;
     height: 90vh;
+    width: 100%;
+    }
+}
+@media (max-width: 1024px){
+    .parallax {
+        height: 80vh;
+        width: 105%;
     }
 }
 @media (max-width: 820px) {
-
     .parallax
     {
     position: relative;
@@ -368,10 +375,93 @@ p {
     justify-content: center;
     align-items: center;
     height: 46vh;
-    width: 76vh;
+    width: 110%;
     }
 }
 
+@media (max-width: 500px) {
+    .sec {
+        padding: 10%;
+    }
+    .parallax
+    {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 120%;
+    }
+    .wrapper {
+        position: relative;
+        display: flex;
+        width: 90%;
+        height: calc(100vh - 80px);
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+        overflow: hidden;
+        font-size: 60%;
+    }
+    .wrapper::before {
+        position: absolute;
+        content: '';
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        right: 10%;
+        top: 45%;
+        background: linear-gradient(45deg, rgb(41, 37, 90), #94dbd3);
+        animation: object1 7s linear infinite;
+    }
+}
+@media (max-width: 428px) {
+    .parallax
+    {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 120%;
+    }   
+}
+@media (max-width: 360px) {
+    .parallax
+    {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22%;
+    width: 120%;
+    }   
+    .wrapper {
+        position: relative;
+        display: flex;
+        width: 90%;
+        height: calc(100vh - 80px);
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+        overflow: hidden;
+        font-size: 40%;
+    }
+    .wrapper::before {
+        position: absolute;
+        content: '';
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        right: 30%;
+        top: 45%;
+        background: linear-gradient(45deg, rgb(41, 37, 90), #94dbd3);
+        animation: object1 7s linear infinite;
+    }
+    .sec {
+        font-size: 70%;
+    }
+}
 
 
 
