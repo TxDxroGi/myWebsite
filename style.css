@@ -202,7 +202,7 @@ body
     width: 60px;
     height: 60px;
     background: transparent;
-    border: 6px solid rgb(0, 255, 157);
+    border: 6px solid rgb(0, 226, 139);
 }
 .box div:nth-child(1){
     top: 12%;
