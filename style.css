@@ -320,6 +320,7 @@ p {
         transform: translateY(-50px);
         opacity: 0;
         transition: .3s ease;
+        color: #112434;
     }
     
     #check:checked~.navbar a { 
