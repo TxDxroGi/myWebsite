@@ -8,6 +8,17 @@
     max-width: 100%;
 }
 
+
+body
+{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center; 
+    overflow-x: hidden;
+}
+
+
+
 html {
     height: 120vh;
     width: 100%;
@@ -26,90 +37,227 @@ html {
         background-position: 0 50%;
     }
 }
- 
 
-body
+
+/*SIDEBAR*/
+
+
+
+
+.sidebar {
+    position: absolute;
+    width: 72px;
+    height: 110vh;
+    background: #383f4a;
+    transition: 0.5s;
+    padding-left: 2px;
+    overflow: hidden;
+    z-index: 1000;
+}
+.sidebar.active
 {
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center; 
-    overflow-x: hidden;
+    width: 250px;
+}
+.side ul {
+    position: relative;
+    height: 100vh;
+}
+.sidebar ul li{
+    position: relative;
+    list-style: none;
+}
+.sidebar ul li.active
+{
+    background: #fcfcfc;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.sidebar ul li.active::before
+{
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 0 5px #ffffff;
+    background: transparent;
+
+}
+.sidebar ul li.active::after
+{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 5px -5px 0 5px #ffffff;
+    background: transparent;
+}
+.side ul li.lg{
+    margin-bottom: 50px;
+}
+.sidebar ul li.lg .icon{
+    font-size: 1.8em;
+    color: #ffffff;
+}
+.sidebar ul li.lg .Text{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #ffffff;
+}
+.sidebar ul li a{
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.sidebar ul li a .icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    padding-left: 10px;
+    height: 70px;
+    font-size: 1.5em;
+    color: #ffffff;
+    transition: 0.5s;
+}
+.sidebar ul li a .Text{
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #fff;
+    padding-left: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.sidebar ul li a .Text2{   /*ภาษาไทย*/
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #fff;
+    padding-left: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    font-family: 'Mitr', sans-serif;
 }
 
+.sidebar ul li.active a .icon
+{
+    color: #ffffff;
+}
+.sidebar ul li.active a .Text
+{
+    color: var(--bg);
+}
+.sidebar ul li.active a .Text2
+{
+    color: var(--bg);
+}
+.sidebar ul li.active a .icon::before
+{
+    content: '';
+    position: absolute;
+    inset: 5px;
+    width: 60px;
+    background: var(--bg);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+ .sidebar ul li:hover.active a .icon::before
+{
+    background: #fff;
+}
 
-
-
-.header
+.sidebar ul li:hover a .icon,
+.sidebar ul li:hover a .Text,
+.sidebar ul li:hover a .Text2{
+    color: var(--bg);
+}
+.Bottom
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20vh;
+}
+.imgbox
 {
     position: relative;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    padding: 0.3rem 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
 }
-
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(10px);
-    z-index: -1;
-}
-
-.header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4),transparent);
-    transition: .5s;
-}
-
-.header:hover::after {
-    left: 100%;
-}
-
-.logo {
-    font-size: 2rem;
-    color: #222c43;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.navbar a
+.imgbox img
 {
-    font-size: 1.15rem;
-    color: #000000;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 2.5rem;
-}
-
-#check {
-    display: none;
-}
-
-.icons {
-    right: 0;
     position: absolute;
-    font-size: 2.8rem;
-    color: #000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.menuToggle
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #414451;
+    z-index: 1000;
     cursor: pointer;
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuToggle::before
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    transform: translateY(-9px);
+    transition: 0.5s;
+    box-shadow: 0 9px 0 #fff;
+}
+.menuToggle::after
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    transform: translateY(9px);
+    transition: 0.5s;
+}
+.menuToggle.active::before
+{
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 0 #fff;
+}
+.menuToggle.active::after
+{
+    transform: translateY(0px) rotate(-45deg);
 }
 
 
-/*NEW*/
+
+
+
 
 
 
