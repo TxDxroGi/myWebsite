@@ -13,31 +13,79 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="app.js"></script>
+
 
 </head>
 <body>
-
-    <header class="header">
-        <a href="#" class="logo">I'Max</a>
-        
-        
-        <input type="checkbox" id="check">
-        <label for="check" class="icons">
-            <i class='bx bx-menu' id="menu-icon"></i>
-            <i class='bx bx-x' id="close-icon"></i>
-        </label>
-
-        <nav class="navbar">
-            <a href="#" style="--i:0">Home</a>
-            <a href="#" style="--i:1">About</a>
-            <a href="https://www.instagram.com/iim_axx/" style="--i:2">Contact</a>
-            <a href="#" style="--i:3">Portfolio</a>
-            <a href="https://youtu.be/LXbbDDJyC5I?si=jXvz1iRMHAM2-IBT" 
-            style="--i:4" id="eiei">อย่าคลิ๊ก^^</a>
-        </nav>
     </header>
-
+    <div class="menuToggle"></div>
+    <div class="sidebar">
+        <ul>
+            <li class="lg" style="--bg:#64b8c3;">
+             <a href="#">
+                <div class="icon">
+                    <ion-icon name="code-slash-outline"></ion-icon>
+                </div>
+                <div class="Text">I'Max</div>
+             </a>
+            </li>
+            <div class="menu">
+                <li style="--bg:#44c6aa;" class="active">
+                     <a href="#">
+                        <div class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </div>
+                        <div class="Text">Home</div>
+                    </a>
+                </li>
+                <li style="--bg:#32b2e5;">
+                     <a href="#">
+                        <div class="icon">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </div>
+                        <div class="Text">About</div>
+                    </a>
+                </li>
+                <li style="--bg:#0b3bd6;">
+                    <a href="#">
+                       <div class="icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                       </div>
+                       <div class="Text">Contact</div>
+                   </a>
+               </li>
+               <li style="--bg:#4304c1;">
+                    <a href="#">
+                        <div class="icon">
+                            <ion-icon name="newspaper-outline"></ion-icon>
+                        </div>
+                        <div class="Text">Portfolio</div>
+                    </a>
+                </li>
+           <li style="--bg:#ca177f;">
+                <a href="#">
+                    <div class="icon">
+                        <ion-icon name="skull-outline"></ion-icon>
+                    </div>
+                    <div class="Text2">อย่าคลิ๊ก</div>
+                </a>
+            </li>
+            <div class="Bottom">
+                <li style="--bg:#333">
+                    <a href="#">
+                        <div class="icon">
+                            <div class="imgbox">
+                                <img src="pic.jpg">
+                            </div>
+                        </div>
+                        <div class="Text">Puwadol Kaspa</div>
+                    </a>
+                </li>                
+            </div>
+        </ul>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
     <div class="box">
@@ -80,6 +128,24 @@
                 backSpeed : 80,
                 backDelay : 1500,
             })
+            
+            </script>
+            <script>
+                let menuToggle = document.querySelector('.menuToggle');
+                let sidebar = document.querySelector('.sidebar');
+                menuToggle.onclick = function(){
+                    menuToggle.classList.toggle('active');
+                    sidebar.classList.toggle('active');
+                }
+
+                let menu = document.querySelectorAll('.menu li');
+                function activeLink(){
+                    menu.forEach((item) =>
+                    item.classList.remove('active'));
+                    this.classList.add('active')
+                }
+                menu.forEach((item)=>
+                item.addEventListener('click',activeLink));
             </script>
 
 
@@ -108,5 +174,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
 
+
+    <script src="app.js"></script>
+    
    </body>
 </html>
