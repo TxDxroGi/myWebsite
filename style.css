@@ -446,12 +446,19 @@ p {
     height: 90vh;
     width: 100%;
 }
-
+    .side-bar
+    {
+        height: 90vh;
+    }
 }
 @media screen and (max-width: 1024px){
     .parallax {
         height: 80vh;
         width: 105%;
+    }
+    .side-bar
+    {
+        height: 80vh;
     }
 
 }
@@ -465,19 +472,38 @@ p {
     height: 90vh;
     width: 110%;
 }
+.side-bar
+{
+    height: 90vh;
+}
 
+}
+@media screen and (max-width: 690px){
 
+    .wrapper {
+        position: absolute;
+        display: flex;
+        width: 90%;
+        height: calc(100vh - 80px);
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+        overflow: hidden;
+        font-size: 13px;
+    }
+    .side-bar{
+        width: 200px;
+        height: 55vh;
+
+    }
 
 
 }
 
 @media screen and (max-width: 500px) {
     .sec {
-        padding: 10%;
-    }
-    .video-bg
-    {
-        width: 100%;
+        padding: 8%;
+        font-size: 15px;
     }
     .parallax
     {
@@ -485,10 +511,20 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
-    width: 120%;
+    height: 80vh;
+    width: 100%;
     }
-
+    .wrapper {
+        font-size: 10px;
+    }
+    h1
+    {
+        font-size: 50px;
+    }
+    p
+    {
+        font-size: 15px;
+    }
 }
 @media screen and (max-width: 428px) {
     .parallax
@@ -502,6 +538,7 @@ p {
     }   
 }
 @media screen and (max-width: 360px) {
+
     .parallax
     {
     position: relative;
@@ -509,11 +546,38 @@ p {
     justify-content: center;
     align-items: center;
     height: 60vh;
-    width: 120%;
+    width: 100%;
+    overflow-x: hidden;
     }   
 
     .sec {
         font-size: 70%;
+    }
+    .wrapper {
+        font-size: 8px;
+    }
+    h1
+    {
+        font-size: 40px;
+    }
+    p
+    {
+        font-size: 12px;
+    }
+    .wrapper::before {
+        position: absolute;
+        content: '';
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        right: 5%;
+        top: 45%;
+        background: linear-gradient(45deg, rgb(136, 130, 211), #21f38aed);
+        animation: object1 7s linear infinite;
+    }
+    .side-bar{
+        width: 180px;
+        height: 65vh;
     }
 }
 
