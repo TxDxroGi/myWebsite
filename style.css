@@ -271,6 +271,10 @@ label:hover
         top: 7%;
     }
 }
+.box
+{
+    z-index: 1001;
+}
 
 .box div{
     position: absolute;
