@@ -533,9 +533,13 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 70vh;
     width: 120%;
     }   
+    .side-bar
+    {
+        height: 70vh;
+    }
 }
 @media screen and (max-width: 360px) {
 
