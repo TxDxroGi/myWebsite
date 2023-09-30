@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
 
 </head>
@@ -37,6 +38,34 @@
             <a href="https://github.com/TxDxroGi"><i class="fab fa-github"></i></a>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+    <!-- HTML background -->
+    <style class="html">
+        html {
+    height: 120vh;
+    width: 100%;
+    background: linear-gradient(45deg,#72b2b7,#ffffff,rgba(84, 122, 236, 0.529));
+    background-size: 200% 200%;
+    animation: color 4s ease-in-out infinite;
+}
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+    </style>
+
+    <img src="deploy1.png" class="abstract1">
+    <img src="deploy2.png" class="abstract2">
 
 
     <div class="box">
@@ -65,8 +94,8 @@
         <div class="wrapper">
             <div class="cols cols0">
                 <span class="topline">Hello</span>
-                <h1>I'm a <span class="multiText"></span></h1>
-                <p>มาทำความรู้จักกับ เเม็ค เเละผลงานของเขากัน!</p>
+                <h1 class="h1">I'm a <span class="multiText"></span></h1>
+                <p class="thai">มาทำความรู้จักกับ เเม็ค เเละผลงานของเขากัน!</p>
             </div>
             <div class="cols cols1">
             </div>
@@ -131,7 +160,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
     <script src="app.js"></script>
 
+    <script>
+        TweenMax.from('.thai', 2, {
+          delay: .6,
+          x: -800,
+          ease: Circ.easeInOut
+        })
+        TweenMax.from('.topline', 2, {
+            delay: .6,
+            x: 1100,
+            ease: Circ.easeInOut
+        })
 
+        TweenMax.from('.h1', 2, {
+            delay: .6,
+            x: 1100,
+            y: 200,
+            ease: Circ.easeInOut
+        })
+
+        TweenMax.from('.abstract1', 2, {
+            delay: .6,
+            x: 1100,
+            y: 200,
+            ease: Circ.easeInOut
+        })
+
+        TweenMax.from('.abstract2', 2, {
+            delay: .6,
+            x: 1100,
+            y: 200,
+            ease: Circ.easeInOut
+        })
+
+        
+    
+      </script>
 
     </div>
     
