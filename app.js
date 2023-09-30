@@ -1,13 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
-TweenMax.to('.multitext', 2, {
-    delay: .8,
-    width: '50%',
-    ease: Power2.easeInOut
-})
-
 gsap.to(".w1" , {
-    x: -700,
+    x: -650,
     duration: 8,
     scrollTrigger: {
         trigger: ".w1",
@@ -24,3 +18,4 @@ gsap.to(".w1" , {
     },
   }
 })
+
