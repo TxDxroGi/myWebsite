@@ -238,7 +238,7 @@ label:hover
     overflow: hidden;
 }
 
-.wrapper::before {
+/* .wrapper::before {
     position: absolute;
     content: '';
     height: 250px;
@@ -272,7 +272,39 @@ label:hover
         left: 38%;
         top: 7%;
     }
+} */
+
+.abstract1 {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    left: 60%;
+    top: 50%;
+    animation: object1 7s linear infinite;
 }
+@keyframes  object1{
+    50%{
+        left: 57%;
+        top: 45%;
+    }
+}
+
+.abstract2 {
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    left: 25%;
+    top: 9%;
+    animation: object2 5s linear infinite;
+}
+@keyframes  object2{
+    50%{
+        left: 26%;
+        top: 7%;
+    }
+}
+
+
 .box
 {
     z-index: 1001;
@@ -373,7 +405,7 @@ h1 {
 
 .multiText {
     color: rgba(255, 255, 255, 0.959);
-    text-transform: capitalize;
+    text-transform: uppercase;
     text-shadow: 0 0 18px #1c5996,
     0 0 30px #39af7c;
 }
@@ -402,7 +434,7 @@ p {
 .sec h2
 {
     padding-left: 100vh;
-    font-size: 5em;
+    font-size: 3em;
     color: #fff;
     text-shadow: linear-gradient(45deg, rgb(136, 130, 211), #21f38aed);
 }
