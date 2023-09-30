@@ -1,4 +1,5 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(MotionPathPlugin)
 
 gsap.to(".w1" , {
     x: -650,
