@@ -9,7 +9,7 @@ gsap.to(".w1" , {
         start: "top 80%",
         end: "top 30%",
         scrub: 5,
-        toggleActions: "restart reset none none",
+        toggleActions: "restart pause none none",
         // play pause resume reverse restart reset comolete none
         //         onEnter | onLeave | onEnterBack | onLeaveBack  
         markers: {
