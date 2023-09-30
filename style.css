@@ -230,7 +230,7 @@ label:hover
 .wrapper {
     position: absolute;
     display: flex;
-    width: 90%;
+    width: 100%;
     height: calc(100vh - 80px);
     justify-content: center;
     align-items: center;
@@ -427,7 +427,7 @@ p {
 {
     position: absolute;
     padding: 50px;
-    background: #20242d;
+    background: linear-gradient(45deg, #112434, #263646, #55758a, #38425d, #677b9c,#415688);
     height: 1000vh;
 }
 
