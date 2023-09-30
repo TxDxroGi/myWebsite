@@ -39,6 +39,8 @@ html {
 }
 
 
+
+
 /*SIDEBAR*/
 
 .side-bar{
@@ -385,24 +387,26 @@ p {
 }
 
 
+
+
+
+
 .sec
 {
     position: absolute;
     padding: 50px;
     background: #20242d;
-    border: 5px solid #27bfc9;
-    border-radius: 1%;
-    box-shadow: inset 0 0 10px #5340f9,
-    0 0 80px #12cbdc,
-    0 0 50px #43188d;
     height: 1000vh;
 }
+
 .sec h2
 {
-    font-size: 3em;
+    padding-left: 100vh;
+    font-size: 5em;
     color: #fff;
-    margin-bottom: 10px;
+    text-shadow: linear-gradient(45deg, rgb(136, 130, 211), #21f38aed);
 }
+
 .sec p
 {
     font-size: 1em;
