@@ -1,22 +1,33 @@
-gsap.registerPlugin(ScrollTrigger)
-gsap.registerPlugin(MotionPathPlugin)
+// gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".w1" , {
-    x: -650,
-    duration: 8,
-    scrollTrigger: {
-        trigger: ".w1",
-        start: "top 80%",
-        end: "top 30%",
-        scrub: 5,
-        toggleActions: "restart none none none",
-        // play pause resume reverse restart reset comolete none
-        //         onEnter | onLeave | onEnterBack | onLeaveBack  
-        markers: {
-            startColor: "purple",
-            endColor: "fuchsia",
-            fontSize: "1rem",
-    },
-  }
-})
+// gsap.to(".animate-text", {
+//     x: -500,
+//     duration: 25,
+//     scrollTrigger: {
+//         trigger: ".sec",
+//         start: "top 50%",
+//         end: "top 10%",
+//         scrub: 8,
+//         markers: {
+//             startsColor: "purple",
+//             endColor: "fuchsia",
+//             fontSize: "1rem",
+//         }
+//     }
+// })
+// gsap.from(".animate-text left", {
+//     x: -500,
+//     duration: 25,
+//     scrollTrigger: {
+//         trigger: ".sec",
+//         start: "top 50%",
+//         end: "top 10%",
+//         scrub: 8,
+//         markers: {
+//             startsColor: "purple",
+//             endColor: "fuchsia",
+//             fontSize: "1rem",
+//         }
+//     }
+// })
 
