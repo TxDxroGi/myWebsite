@@ -18,15 +18,16 @@ body
     background-size: cover;
     background-position: center; 
     overflow-x: hidden;
+    background-color: #0d0e1c;
 }
 
 
-
-html 
+/* html 
 {
+    overflow: none;
     height: 120vh;
     width: 100%;
-    background: linear-gradient(45deg,#72b2b7,#1e4a8c,rgba(84, 122, 236, 0.529));
+    background: linear-gradient(45deg,#72b2b7,#ffffff,rgb(128, 158, 255));
     background-size: 200% 200%;
     animation: color 4s ease-in-out infinite;
 }
@@ -40,7 +41,7 @@ html
     100%{
         background-position: 0 50%;
     }
-}
+} */
 
 
 
@@ -158,9 +159,9 @@ html
 label
 {
     font-size: 20px;
-    color: #26264f;
-    box-shadow: -3px -3px 7px #fff,
-                 3px 3px 5px #9b9b9b;
+    color: #0af9cd;
+    box-shadow: -3px -3px 7px #e60868,
+                 3px 3px 5px #0091ff;
     height: 37px;
     width: 37px;
     border-radius: 50%;
@@ -177,9 +178,9 @@ label
 }
 label:hover
 {
-    box-shadow: inset -3px -3px 7px #fff,
-                inset 3px 3px 5px #d9d9d9;
-    color: #3300ff;
+    box-shadow: inset -3px -3px 7px #a6fbff,
+                inset 3px 3px 5px #e418ff;
+    color: #5fb7ff;
 }
 #check
 {
@@ -198,7 +199,7 @@ label:hover
 
 .parallax
 {
-    overflow-y: hidden;
+    overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
@@ -282,16 +283,16 @@ label:hover
 
 .abstract1 {
     position: absolute;
-    height: 50%;
-    width: 50%;
+    height: 25%;
+    width: 25%;
     left: 60%;
-    top: 50%;
+    top: 70%;
     animation: object1 7s linear infinite;
 }
 @keyframes  object1{
     50%{
-        left: 57%;
-        top: 45%;
+        left: 55%;
+        top: 65%;
     }
 }
 
@@ -313,7 +314,9 @@ label:hover
 
 .box
 {
-    z-index: 1001;
+    z-index: -10;
+    box-shadow: 0 0 18px #00e5ff,
+    0 0 30px #39af7c;
 }
 
 .box div{
@@ -321,57 +324,80 @@ label:hover
     width: 60px;
     height: 60px;
     background: transparent;
-    border: 6px solid rgb(0, 226, 139);
+    border: 6px solid rgb(255, 65, 138);
+    border-radius: 34% 66% 69% 31% / 30% 48% 52% 70% ;
+    box-shadow: 0 0 50px#1c5996,
+    0 0 50px #00fff7;
 }
 .box div:nth-child(1){
     top: 12%;
     left: 42%;
     animation: animate 10s linear infinite;
+    box-shadow: 0 0 18px #1c5996,
+    0 0 30px #00ffd9;
 }
 .box div:nth-child(2){
     top: 70%;
     left: 50%;
     animation: animate 7s linear infinite;
+    box-shadow: 0 0 18px #1c5996,
+    0 0 30px #04ffff;
 }
 .box div:nth-child(3){
     top: 17%;
     left: 6%;
     animation: animate 9s linear infinite;
+    box-shadow: 0 0 18px #1c5996,
+    0 0 30px #00fffb;
 }
 .box div:nth-child(4){
     top: 20%;
     left: 60%;
     animation: animate 10s linear infinite;
+    box-shadow: 0 0 18px #1c5996,
+    0 0 30px #00ffd5;
 }
 .box div:nth-child(5){
     top: 67%;
     left: 10%;
     animation: animate 6s linear infinite;
+    box-shadow: 0 0 18px #1c5996,
+    0 0 30px #00ffd0;
 }
 .box div:nth-child(6){
     top: 80%;
     left: 70%;
     animation: animate 12s linear infinite;
+    box-shadow: 0 0 18px #1c5996,
+    0 0 30px #00f2ff;
 }
 .box div:nth-child(7){
     top: 60%;
     left: 80%;
     animation: animate 15s linear infinite;
+    box-shadow: 0 0 18px #1c5996,
+    0 0 30px #00ffe1;
 }
 .box div:nth-child(8){
     top: 32%;
     left: 25%;
     animation: animate 16s linear infinite;
+    box-shadow: 0 0 18px #1c5996,
+    0 0 30px #00ffea;
 }
 .box div:nth-child(9){
     top: 90%;
     left: 25%;
     animation: animate 9s linear infinite;
+    box-shadow: 0 0 18px #000dff,
+    0 0 30px #00f2ff;
 }
 .box div:nth-child(10){
     top: 20%;
     left: 70%;
     animation: animate 12s linear infinite;
+    box-shadow: 0 0 18px #00fffb,
+    0 0 30px #0055ff;
 }
 @keyframes animate{
     0%{
@@ -399,14 +425,14 @@ label:hover
     position: relative;
     font-size: 35px;
     letter-spacing: 5px;
-    color: #1d263a;
+    color: #ffffff;
 }
 
 h1 {
     display: block;
     font-size: 5em;
     font-weight: 700;
-    color: #35425c;
+    color: rgb(255, 255, 255);
 }
 
 .multiText {
@@ -421,7 +447,7 @@ p {
     display: block;
     width: 90%;
     font-size: 1.2em;
-    color: #112434;
+    color: #767676;
     font-family: 'Mitr', sans-serif;
 }
 
@@ -445,8 +471,18 @@ p {
 {
     font-family: montserrat;
     color: #ffffff;
+    width: 100%;
+}
+.sec
+{
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .bg-text-container {
+    overflow: hidden;
   transform: translateX(-10%);
   /* left: 30%; */
   position: relative;
@@ -473,11 +509,12 @@ p {
 }
 .animate-text.left {
     animation-direction: reverse;
-    right: 500px;
+    right: 800px;
     bottom: 765px;
 }
 
 .bg-text-container {
+    left: 100px;
     /* top:600px; */
     position: relative;
   font-size: 40px;
@@ -487,6 +524,8 @@ p {
   font-weight: 550;
   will-change: transform;
   height: 800px;
+  color: #fff;
+  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
@@ -495,7 +534,7 @@ p {
 
 .sec
 {
-    position: relative;
+    position: absolute;
     padding: 50px;
     background: linear-gradient(45deg, #112434, #263646, #1d6f89, #38425d, #3f4753,#415688);
     height: 1000vh;
