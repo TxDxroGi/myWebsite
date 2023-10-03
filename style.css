@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:800,200');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Poppins:wght@500&family=Righteous&display=swap');
 *
 {
     margin: 0;
@@ -412,6 +414,7 @@ h1 {
     text-transform: uppercase;
     text-shadow: 0 0 18px #1c5996,
     0 0 30px #39af7c;
+    font-family: 'Pixelify Sans', cursive;
 }
 
 p {
@@ -441,44 +444,49 @@ p {
 .sec
 {
     font-family: montserrat;
-    color: #fff;
+    color: #ffffff;
 }
 .bg-text-container {
   transform: translateX(-10%);
-  left: 30%;
+  /* left: 30%; */
   position: relative;
   z-index: 999;
 }
 /* animation */
-@keyframes text-scrolling {
+/* @keyframes text-scrolling {
   0% {
-    transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0)
   }
   100% {
     transform: translate3d(0%, 0, 0);
   }
-}
+} */
 
 
 .animate-text {
-  animation: text-scrolling 8s linear infinite;
-  will-change: transform;
-  display: block;
-  position: relative;
-  white-space: nowrap;
+    animation: text-scrolling 18s linear infinite;
+    will-change: transform;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    top: 30px;
 }
 .animate-text.left {
-  animation-direction: reverse;
+    animation-direction: reverse;
+    right: 500px;
+    bottom: 765px;
 }
 
-span {
+.bg-text-container {
+    /* top:600px; */
     position: relative;
-  font-size: 60px;
-  color: transparent;
-  -webkit-text-stroke: 2px #c3e1ff;
+  font-size: 40px;
+  /* color: transparent; */
   text-transform: uppercase;
-  line-height: 0.8;
-  font-weight: 500;
+  line-height: 1;
+  font-weight: 550;
+  will-change: transform;
+  height: 800px;
 }
 
 /*# sourceMappingURL=style.css.map */
