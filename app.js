@@ -8,11 +8,11 @@ gsap.to(".animate-text", {
         start: "top 80%",
         end: "top 2%",
         scrub: 8,
-        markers: {
-            startsColor: "purple",
-            endColor: "fuchsia",
-            fontSize: "1rem",
-        }
+        // markers: {
+        //     startsColor: "purple",
+        //     endColor: "fuchsia",
+        //     fontSize: "1rem",
+        // }
     }
 })
 gsap.to(".animate-text.left", {
@@ -23,10 +23,10 @@ gsap.to(".animate-text.left", {
         start: "top 80%",
         end: "top 2%",
         scrub: 8,
-        markers: {
-            startsColor: "purple",
-            endColor: "fuchsia",
-            fontSize: "1rem",
-        }
+        // markers: {
+        //     startsColor: "purple",
+        //     endColor: "fuchsia",
+        //     fontSize: "1rem",
+        // }
     }
 })
