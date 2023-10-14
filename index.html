@@ -18,12 +18,14 @@
 
 </head>
 <body>
+
+
+    
     <input type="checkbox" id="check">
     <label class="button bars" for="check"><i class="fas fa-list"></i></label>
     <div class="side-bar">
         <div class="title">
             <div class="logo">I'Max</div>
-            <label class="button cancel" for="check"><i class="fas fa-times"></i></label>
         </div>
         <ul>
             <li><a href="index.html"><i class='fas fa-home'></i>Home</a></li>
@@ -64,11 +66,11 @@
 }
     </style> -->
 
-    <img src="absnew.png" class="abstract1">
-    <img src="deploy2.png" class="abstract2">
+    <!-- <img src="absnew.png" class="abstract1">
+    <img src="deploy2.png" class="abstract2"> -->
 
 
-    <div class="box">
+    <!-- <div class="box">
         <div></div>
         <div></div>
         <div></div>
@@ -79,11 +81,15 @@
         <div></div>
         <div></div>
         <div></div>
-    </div>
+    </div> -->
 
     <!---glow-->
 
-
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+     </div>
      
 <!--Parallax-->
 
@@ -93,23 +99,25 @@
 
         <div class="wrapper">
             <div class="cols cols0">
-                <div class="topline">Hello</div>
-                <h1 class="h1">I'm a <span class="multiText"></span></h1>
-                <p class="thai">มาทำความรู้จักกับ เเม็ค เเละผลงานของเขากัน!</p>
+                <h1 class="h1">
+                    Hi, I'm Max and 
+                    I want to be
+                <span class="multiText">Web Developer</span></h1>
+                <p class="thai">Let me show You...!</p>
             </div>
             <div class="cols cols1">
             </div>
         </div>
 
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-        <script>
+        <!-- <script>
             var typingEffect = new Typed(".multiText",{
-                strings : ["coder?","programmer?","best friend","dream chaser?"],
+                strings : ["coder","programmer","designer"],
                 loop : true,
                 typeSpeed : 100,
                 backSpeed : 80,
                 backDelay : 1500,
-            })
+            }) -->
             
             </script>
             <script>
@@ -181,37 +189,24 @@
     <script src="https://unpkg.com/split-type"></script>
 
     <script>
-        TweenMax.from('.thai', 2, {
-          delay: .6,
+        TweenMax.from('.thai', 3.5, {
+          delay: .3,
           x: -800,
           ease: Circ.easeInOut
         })
-        TweenMax.from('.topline', 2, {
-            delay: .6,
-            x: 1100,
+
+        TweenMax.from('.h1', 2.5, {
+            delay: .3,
+            y: -2000,
             ease: Circ.easeInOut
         })
 
-        TweenMax.from('.h1', 2, {
-            delay: .6,
-            x: 1100,
-            y: 200,
+        TweenMax.from('.multiText', 2.5, {
+            delay: .3,
+            y: 3000,
             ease: Circ.easeInOut
         })
 
-        TweenMax.from('.abstract1', 2, {
-            delay: .6,
-            x: 1100,
-            y: 200,
-            ease: Circ.easeInOut
-        })
-
-        TweenMax.from('.abstract2', 2, {
-            delay: .6,
-            x: 1100,
-            y: 200,
-            ease: Circ.easeInOut
-        })
 
         
     
