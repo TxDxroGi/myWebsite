@@ -18,7 +18,8 @@ body
     background-size: cover;
     background-position: center; 
     overflow-x: hidden;
-    background-color: #20212a;
+    background: #fff;
+    width: 100% ;
 }
 
 
@@ -56,12 +57,12 @@ body
     height: 110vh;
     background: #ffffff;
     padding: 12px;
-    box-shadow: -3px -3px 7px #fff, 
-                  3px 3px 5px #c5c5c5,
-                  inset -3px 7px #fff,
-                    inset 3px 3px 5px #d2d2d2;
+    box-shadow: -3px -3px 7px #e0ebff, 
+                  3px 3px 5px #aeaeae,
+                   -3px 7px #8d8d8d,
+                    inset 3px 3px 5px #b7dcdb;
     z-index: 1000;
-    transition: all 0.4s ease;
+    transition: all 1s ease;
 }
 .side-bar .title 
 {
@@ -72,7 +73,7 @@ body
 {
     font-size: 30px;
     font-weight: 800;
-    color: #38425d;
+    color: #272c3e;
 }
 .side-bar ul
 {
@@ -81,7 +82,7 @@ body
 }
 .side-bar ul a
 {
-    color: #3d4156;
+    color: #2c313e;
     text-decoration: none;
     display: block;
     margin-top: 12px;
@@ -92,7 +93,7 @@ body
     border-radius: 6px;
     font-family: 'Mitr', sans-serif;
     box-shadow: -3px -3px 7px #ffffff,
-                  3px 3px 5px #b9b9b9ed;
+                  3px 3px 5px #ffffffed;
     position: relative;
 }
 .side-bar ul i 
@@ -130,7 +131,7 @@ body
     right: 0;
     bottom: 0;
     box-shadow: inset -3px -3px 7px #fff,
-                inset 3px 3px 5px #c9c9c9;
+                inset 3px 3px 5px #ffffff;
 }
 .side-bar ul a:hover:before
 {
@@ -138,7 +139,7 @@ body
 }
 .side-bar ul a:hover
 {
-    color: #7083ff;
+    color: #97b2c5;
 }
 .media-icons a:hover::before
 {
@@ -159,11 +160,11 @@ body
 label
 {
     font-size: 20px;
-    color: #0af9cd;
-    box-shadow: -3px -3px 7px #e60868,
+    color: #434343;
+    box-shadow: -3px -3px 7px #08e6ba,
                  3px 3px 5px #0091ff;
     height: 37px;
-    width: 37px;
+    width: 39px;
     border-radius: 50%;
     text-align: center;
     line-height: 36px;
@@ -173,14 +174,16 @@ label
 .bars
 {
     position: absolute;
-    left: 15px;
+    right: 15px;
     top: 15px;
+
 }
 label:hover
 {
     box-shadow: inset -3px -3px 7px #a6fbff,
                 inset 3px 3px 5px #e418ff;
     color: #5fb7ff;
+    transition: 0.5s ease;
 }
 #check
 {
@@ -312,14 +315,14 @@ label:hover
 }
 
 
-.box
+/* .box
 {
     z-index: -10;
     box-shadow: 0 0 18px #00e5ff,
     0 0 30px #39af7c;
-}
+} */
 
-.box div{
+/* .box div{
     position: absolute;
     width: 60px;
     height: 60px;
@@ -408,7 +411,8 @@ label:hover
         transform: scale(1.3) translateY(-90px) rotate(360deg);
         opacity: 0;
     }
-}
+} */
+
 
 
 
@@ -429,25 +433,57 @@ label:hover
 }
 
 h1 {
+    text-transform: uppercase;
     display: block;
-    font-size: 5em;
-    font-weight: 700;
-    color: rgb(255, 255, 255);
+    font-size: 3em;
+    font-weight: 900;
+    width: 80%;
+    background-image: linear-gradient(
+        -180deg,
+        #ffffff 0%,
+        #001870 67%,
+        #20162f 100%
+      );
+    background-clip: border-box;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .multiText {
-    color: rgba(255, 255, 255, 0.959);
     text-transform: uppercase;
-    text-shadow: 0 0 18px #1c5996,
-    0 0 30px #39af7c;
-    font-family: 'Pixelify Sans', cursive;
+    background-image: linear-gradient(
+      -195deg,
+      #0c20ff 0%,
+      #7e82ff 29%,
+      #00ffd5 67%,
+      #00d5ff 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 3s linear infinite;
+    display: inline-block;
+      font-size: 45px;
 }
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
 
 p {
     display: block;
     width: 90%;
     font-size: 1.2em;
-    color: #767676;
+    color: #2f2f2f;
     font-family: 'Mitr', sans-serif;
 }
 
@@ -531,7 +567,7 @@ p {
 /*# sourceMappingURL=style.css.map */
 
 
-.hentai
+/* .hentai
 {
     aspect-ratio: 960/540;
     width: 100%;
@@ -543,7 +579,7 @@ p {
 .layer1 
 {
     background-image: url('hentai.svg');
-}
+} */
 
 .sec
 {
