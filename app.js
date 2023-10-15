@@ -30,3 +30,6 @@ gsap.to(".animate-text.left", {
         // }
     }
 })
+
+// var words = ['console.log("my-portfolio");', 'puts "I am old 16 years old"', 
+// 'console.log("I want to be a programmer")','echo "I want to write code";'],
