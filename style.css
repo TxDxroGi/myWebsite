@@ -20,6 +20,8 @@ body
     overflow-x: hidden;
     background: #fff;
     width: 100% ;
+    background-color: #161616;
+    color: #2c2c2c;
 }
 
 
@@ -43,6 +45,63 @@ body
         background-position: 0 50%;
     }
 } */
+
+.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70vh;
+    margin: auto;
+    width: 55vw;
+}
+.line {
+    position: absolute;
+    width: 3px;
+    height: 180vh;
+    top: 0;
+    left: 70%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(-138deg);
+}
+.line::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 50vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, rgb(167, 255, 226) 0%, #00bcc9 50%, #4b1ffc 100%);
+    animation: drop 4s 0s infinite;
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    text-shadow: inset 2px 2px 5px #a6fbff;
+}
+
+.line:nth-child(1) {
+    margin-left: -25%;
+}
+.line:nth-child(1)::after {
+    animation-delay: 2s;
+}
+.line:nth-child(3) {
+    margin-left: 25%;
+}
+.line:nth-child(3)::after {
+    animation-delay: 2.5s;
+}
+
+@keyframes drop {
+    0% {
+        top: -50%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+
+/*----------------------------------------------------*/
 
 
 
@@ -782,13 +841,3 @@ p {
         height: 65vh;
     }
 }
-
-
-
-
-
-
-
-
-
-
