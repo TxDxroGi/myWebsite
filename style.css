@@ -14,11 +14,9 @@
 
 body
 {
-    min-height: 100vh;
     background-size: cover;
     background-position: center; 
     overflow-x: hidden;
-    background: #fff;
     width: 100% ;
     background-color: #161616;
     color: #2c2c2c;
@@ -51,18 +49,20 @@ body
     top: 0;
     left: 0;
     right: 0;
-    height: 70vh;
-    margin: auto;
-    width: 55vw;
+    height: 150vh;
+    width: 100vw;
+    overflow: hidden;
 }
 .line {
     position: absolute;
-    width: 3px;
-    height: 180vh;
-    top: 0;
-    left: 70%;
+    width: 2px;
+    height: 115vh;
+    bottom: 40vh;
+    left: 75%;
     background: rgba(255, 255, 255, 0.1);
-    transform: rotate(-138deg);
+    transform: rotate(33deg);
+    box-shadow: 2px 2px 2px
+    #00000059;
 }
 .line::after {
     content: '';
@@ -74,34 +74,30 @@ body
     left: 0;
     background: linear-gradient(to bottom, rgb(167, 255, 226) 0%, #00bcc9 50%, #4b1ffc 100%);
     animation: drop 4s 0s infinite;
-    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-    text-shadow: inset 2px 2px 5px #a6fbff;
+    animation-fill-mode: forwards; 
+    box-shadow: 1px 2px 4px
+    #fc2dcf;
 }
-
 .line:nth-child(1) {
-    margin-left: -25%;
+    margin-left: -10%;
 }
 .line:nth-child(1)::after {
     animation-delay: 2s;
 }
 .line:nth-child(3) {
-    margin-left: 25%;
+    margin-left: 10%;
 }
 .line:nth-child(3)::after {
     animation-delay: 2.5s;
 }
-
 @keyframes drop {
     0% {
         top: -50%;
     }
     100% {
-        top: 100%;
+        top: 110%;
     }
 }
-
-
-/*----------------------------------------------------*/
 
 
 
@@ -112,31 +108,37 @@ body
     position: absolute;
     top: 0;
     left: -100%;
-    width: 300px;
-    height: 110vh;
+    width: 180px;
+    height: 80vh;
     background: #ffffff;
     padding: 12px;
     box-shadow: -3px -3px 7px #e0ebff, 
-                  3px 3px 5px #aeaeae,
-                   -3px 7px #8d8d8d,
+                  3px 3px 5px #10ffc7,
+                   -3px 7px #54545441,
                     inset 3px 3px 5px #b7dcdb;
     z-index: 1000;
     transition: all 1s ease;
+    border-radius: 5px;
 }
 .side-bar .title 
 {
     display: flex;
     justify-content: space-evenly;
 }
-.side-bar .title .logo
+.side-bar .title .logo 
 {
-    font-size: 30px;
-    font-weight: 800;
+    font-size: 40px;
+    font-weight: 900;
     color: #272c3e;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    font-family: 'Pixelify Sans';
 }
 .side-bar ul
 {
-    margin-top: 35px;
+    margin-top: 2px;
     list-style: none;
 }
 .side-bar ul a
@@ -145,8 +147,8 @@ body
     text-decoration: none;
     display: block;
     margin-top: 12px;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 300;
     padding: 10px 25px;
     background: #ffffff;
     border-radius: 6px;
@@ -176,11 +178,11 @@ body
     text-align: center;
     line-height: 40px;
     text-decoration: none;
-    box-shadow: -3px -3px 7px #e0e0e0,
+    box-shadow: -3px -3px 7px #a4a4a4,
                  3px 3px 5px #40c4a0;
     position: relative;
 }
-.side-bar ul a:hover:before,
+
 .media-icons a:hover:before
 {
     position: absolute;
@@ -189,8 +191,19 @@ body
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: inset -3px -3px 7px #fff,
-                inset 3px 3px 5px #ffffff;
+    box-shadow: inset -3px -3px 7px #0cffce88,
+                inset 3px 3px 5px #00c8cb92;
+}
+.side-bar ul a:hover:before
+{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset -3px -3px 7px #ffffff,
+                inset 3px 3px 5px #ffffff; 
 }
 .side-bar ul a:hover:before
 {
@@ -219,7 +232,7 @@ body
 label
 {
     font-size: 20px;
-    color: #434343;
+    color: #9b9b9b;
     box-shadow: -3px -3px 7px #08e6ba,
                  3px 3px 5px #0091ff;
     height: 37px;
@@ -229,6 +242,7 @@ label
     line-height: 36px;
     cursor: pointer;
     transition: 0.5s ease;
+    z-index: 1000;
 }
 .bars
 {
@@ -239,8 +253,8 @@ label
 }
 label:hover
 {
-    box-shadow: inset -3px -3px 7px #a6fbff,
-                inset 3px 3px 5px #e418ff;
+    box-shadow: inset -3px -3px 7px #373737,
+                inset 3px 3px 5px #333333;
     color: #5fb7ff;
     transition: 0.5s ease;
 }
@@ -255,6 +269,38 @@ label:hover
 
 
 
+#first
+{
+    position: absolute;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #4e4e4e75;
+    font-size: 1.5em;
+    font-weight: 600;
+    top: 10vh;
+    left: 10vh;
+}
+
+#second
+{
+    position: absolute;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #4e4e4e52;
+    font-size: 1.3em;
+    font-weight: 600;
+    top: 70vh;
+    left: 60vh;
+}
+
+#third
+{
+    position: absolute;
+    font-family: 'Pixelify Sans';
+    color: #4e4e4e4e;
+    font-size: 1.5em;
+    font-weight: 600;
+    top: 180px;
+    left: 80vh;
+}
 
 
 /*OOO*/
@@ -266,25 +312,8 @@ label:hover
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 110vh;
+    height: 150vh;
     z-index: -1000;
-}
-#text
-{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 4em;
-    color: #112434;
-}
-#text2
-{
-    position: absolute;
-    top:50%;
-    transform: translateY(150%);
-    font-size: 4em;
-    color: #112434;
-    font-family: 'Mitr', sans-serif;
 }
 #eiei
 {
@@ -342,7 +371,7 @@ label:hover
 } */
 
 
-
+/* 
 .abstract1 {
     position: absolute;
     height: 25%;
@@ -371,7 +400,7 @@ label:hover
         left: 26%;
         top: 7%;
     }
-}
+} */
 
 
 /* .box
@@ -494,7 +523,7 @@ label:hover
 h1 {
     text-transform: uppercase;
     display: block;
-    font-size: 3em;
+    font-size: 2.3em;
     font-weight: 900;
     width: 80%;
     background-image: linear-gradient(
@@ -528,7 +557,7 @@ h1 {
     -webkit-text-fill-color: transparent;
     animation: textclip 3s linear infinite;
     display: inline-block;
-      font-size: 45px;
+    font-size: 45px;
 }
 
 @keyframes textclip {
@@ -643,7 +672,7 @@ p {
 .sec
 {
     position: absolute;
-    padding: 50px;
+    padding: 0;
     background: linear-gradient(45deg, rgb(2, 192, 255), #263646, #1d6f89, #38425d,#3d4f6c);
     height: 1000vh;
 }
@@ -690,6 +719,22 @@ p {
 
 
 
+@media screen and (max-width: 1600px) {
+    .parallax
+    {
+    overflow-y: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+}
+    .side-bar
+    {
+        height: 90vh;
+    }
+}
 
 
 @media screen and (max-width: 1180px) {
