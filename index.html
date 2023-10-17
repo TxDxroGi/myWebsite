@@ -110,10 +110,15 @@
 
         <div class="wrapper">
             <div class="cols cols0">
-                <h1 class="h1">
+                <h1 class="heads">
                     Hi, I'm Max and 
                     I want to be
-                <span class="multiText">Web Developer</span></h1>
+                </h1>
+                    <div class="big">
+                        <h2 class="text-title">
+                <span data-text="Web developer">Web Developer</span>
+            </h2>
+        </div>
                 <p class="thai">Let me show You...!</p>
             </div>
             <div class="cols cols1">
@@ -188,15 +193,16 @@
           ease: Circ.easeInOut
         })
 
-        TweenMax.from('.h1', 2.5, {
+        TweenMax.from('.heads', 2.5, {
             delay: .5,
             y: 2000,
             ease: Circ.easeInOut
         })
 
-        TweenMax.from('.multiText', 2.5, {
-            delay: .5,
-            y: -5000,
+        TweenMax.from('.text-title', 3, {
+            delay: .8,
+            y: -1800,
+            x: 4000,
             ease: Circ.easeInOut
         })
 
