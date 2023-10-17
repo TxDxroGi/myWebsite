@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:800,200');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Poppins:wght@500&family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700;900&display=swap");
 *
 {
     margin: 0;
@@ -102,6 +103,7 @@ body
 
 
 
+
 /*SIDEBAR*/
 
 .side-bar{
@@ -109,7 +111,7 @@ body
     top: 0;
     left: -100%;
     width: 180px;
-    height: 80vh;
+    height: 100vh;
     background: #ffffff;
     padding: 12px;
     box-shadow: -3px -3px 7px #e0ebff, 
@@ -520,7 +522,7 @@ label:hover
     color: #ffffff;
 }
 
-h1 {
+.heads {
     text-transform: uppercase;
     display: block;
     font-size: 2.3em;
@@ -529,8 +531,8 @@ h1 {
     background-image: linear-gradient(
         -180deg,
         #ffffff 0%,
-        #001870 67%,
-        #20162f 100%
+        #606a8c 67%,
+        #17172f 100%
       );
     background-clip: border-box;
     color: #fff;
@@ -539,14 +541,46 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
-.multiText {
+.big 
+{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    transform: skew(0, -10deg);
+}
+
+
+.text-title
+{
+    color: #ffffff;
+    font-weight: 850;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 8vw, 4rem);
+    line-height: 0.75em;
+    text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
+     5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
+  }
+.text-title span {
+    display: block;
+    position: relative;
+    top: 20px;
+    left: 100px;
+}
+.text-title span:before {
+    content: attr(data-text);
+    position: absolute;
+    text-shadow: 2px 2px 1px #6c63a7, -1px -1px 1px #c800ff, -2px 2px 1px #f700ff, 1px -1px 1px #ffffff;
+    z-index: 1;
+    font-family: "Exo 2", sans-serif;
+}
+
+/* .multiText {
     text-transform: uppercase;
     background-image: linear-gradient(
       -195deg,
-      #0c20ff 0%,
-      #7e82ff 29%,
-      #00ffd5 67%,
-      #00d5ff 100%
+      #4b4b4b 0%,
+      #929292 50%,
+      #ffffff 100%
     );
     background-size: auto auto;
     background-clip: border-box;
@@ -558,7 +592,7 @@ h1 {
     animation: textclip 3s linear infinite;
     display: inline-block;
     font-size: 45px;
-}
+} */
 
 @keyframes textclip {
   to {
@@ -567,13 +601,12 @@ h1 {
 }
 
 
-p {
+.thai {
     display: block;
     width: 90%;
     font-size: 1.2em;
-    color: #2f2f2f;
-    font-family: 'Mitr', sans-serif;
-}
+    color: #838383;
+    font-family: 'Mitr', sans-serif;}
 
 
 
@@ -591,26 +624,14 @@ p {
   line-height: 1.5;
   color: #fff;
 } */
-.sec
-{
-    font-family: montserrat;
-    color: #ffffff;
-    width: 100%;
-}
-.sec
-{
-    aspect-ratio: 960/300;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.bg-text-container {
+
+.bg-text-container
+ {
     overflow: hidden;
-  transform: translateX(-10%);
+    transform: translateX(-10%);
   /* left: 30%; */
-  position: relative;
-  z-index: 999;
+    position: relative;
+    z-index: 999;
 }
 /* animation */
 /* @keyframes text-scrolling {
@@ -629,7 +650,9 @@ p {
     display: block;
     position: relative;
     white-space: nowrap;
-    top: 30px;
+    top: 60px;
+    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
+    color: transparent;
 }
 .animate-text.left {
     animation-direction: reverse;
@@ -638,7 +661,7 @@ p {
 }
 
 .bg-text-container {
-    left: 100px;
+    left: 130px;
     /* top:600px; */
     position: relative;
   font-size: 40px;
@@ -671,9 +694,9 @@ p {
 
 .sec
 {
-    position: absolute;
+    position: relative;
     padding: 0;
-    background: linear-gradient(45deg, rgb(2, 192, 255), #263646, #1d6f89, #38425d,#3d4f6c);
+    background: #16161600;
     height: 1000vh;
 }
 
