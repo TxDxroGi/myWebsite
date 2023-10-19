@@ -10,7 +10,6 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     max-width: 100%;
-    overflow: hidden;
 }
 
 
@@ -18,7 +17,6 @@ body
 {
     background-size: cover;
     background-position: center;
-    width: 100% ;
     background-color: #161616;
     color: #2c2c2c;
 }
@@ -51,8 +49,9 @@ body
     left: 0;
     right: 0;
     height: 150vh;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
+    z-index: -1000;
 }
 .line {
     position: absolute;
@@ -115,9 +114,9 @@ body
     background: #ffffff;
     padding: 12px;
     box-shadow: -3px -3px 7px #e0ebff, 
-                  3px 3px 5px #10ffc7,
+                  3px 3px 5px #999999,
                    -3px 7px #54545441,
-                    inset 3px 3px 5px #b7dcdb;
+                    inset 3px 3px 5px #dcdcdc;
     z-index: 1000;
     transition: all 1s ease;
     border-radius: 5px;
@@ -161,7 +160,7 @@ body
 }
 .side-bar ul i 
 {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 .media-icons
 {
@@ -172,7 +171,7 @@ body
 .media-icons a
 {
     margin: 0 4px;
-    font-size: 17px;
+    font-size: 14px;
     cursor: pointer;
     height: 40px;
     width: 40px;
@@ -315,7 +314,7 @@ label:hover
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150vh;
+    height: 100vh;
     z-index: -1000;
 }
 #eiei
@@ -330,10 +329,9 @@ label:hover
     position: absolute;
     display: flex;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 10px;
     justify-content: center;
     align-items: center;
-    padding: 0 10%;
     overflow: hidden;
 }
 
@@ -540,6 +538,7 @@ label:hover
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    height: 80px;
 }
 
 .big 
@@ -868,7 +867,12 @@ label:hover
         height: 70vh;
     }
 }
+
+/* ---------------------------SCREEN 360 PX : Phone ----------------------------- */
+
+
 @media screen and (max-width: 360px) {
+
 
     .parallax
     {
@@ -881,33 +885,68 @@ label:hover
     overflow-x: hidden;
     }   
 
-    .sec {
-        font-size: 70%;
-    }
-    .wrapper {
-        font-size: 8px;
-    }
-    h1
+    .side-bar
     {
-        font-size: 40px;
+        width: 160px;
+        height: 78vh;
     }
-    p
+
+    .side-bar .title .logo 
+    {
+        margin-top: 2px;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .side-bar ul a
+    {
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 200;
+    }
+    .media-icons a
     {
         font-size: 12px;
-    }
-    .wrapper::before {
-        position: absolute;
-        content: '';
-        height: 150px;
-        width: 150px;
+        height: 30px;
+        width: 30px;
         border-radius: 50%;
-        right: 5%;
-        top: 45%;
-        background: linear-gradient(45deg, rgb(136, 130, 211), #21f38aed);
-        animation: object1 7s linear infinite;
+        line-height: 30px;
     }
-    .side-bar{
-        width: 180px;
-        height: 65vh;
+    .media-icons
+    {
+        margin-top: 98px;
+    }
+}
+
+/* ---------------------------SCREEN 320 PX : Phone ----------------------------- */
+
+@media screen and (max-width: 320px) {
+
+    .heads {
+        width: 95%;
+    }
+
+    .lines
+    {
+        height: 180vh;
+    }
+
+    .line
+    {
+        height: 150vh;
+        left: 40%;
+    }
+    .text-title
+    {
+        color: #ffffff;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 0.90em;
+      }
+      .text-title span {
+        display: block;
+        position: relative;
+        bottom: px;
+        left: 70px;
     }
 }
