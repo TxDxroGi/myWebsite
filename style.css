@@ -10,16 +10,147 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     max-width: 100%;
+    text-decoration: none;
+    list-style: none;
 }
 
+html
+{
+    background: linear-gradient(20deg, rgb(46, 46, 46), rgb(17, 17, 17));
+}
 
 body
 {
     background-size: cover;
     background-position: center;
-    background-color: #161616;
-    color: #2c2c2c;
+    height: 100vh;
 }
+header
+{
+    width: 80%;
+    height: 70px;
+    background: #ffffff00;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+}
+.logo
+{
+    width: 120px;
+    margin-top: 8px;
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -180deg,
+        #ffffff 0%,
+        #ffffff 69%,
+        #000000 100%
+      );
+    background-clip: border-box;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+nav .logo
+{
+    display: none;
+}
+nav ul
+{
+    display: flex;
+}
+nav ul li a
+{
+    color: #fff;
+    display: block;
+    margin: 0 20px;
+    font-weight: 500;
+    padding: 8px 18px;
+    transition: 0.2s;
+    border-radius: 30px;
+}
+nav ul li a:hover
+{
+    background: #57575774;
+}
+nav ul li a.active
+{
+    background: #595959f0;
+    color: #fff;
+}
+.hamberger
+{
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+.hamberger:hover
+{
+    background: #565656;
+}
+.hamberger div
+{
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #ffffff;
+}
+@media only screen and (max-width: 1100px) 
+{
+    header
+    {
+        width: 90%;
+        padding: 0 20px;
+    }
+    nav 
+    {
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: #303030;
+        transition: 0.2s;
+        box-shadow: 2px 0 20px 0 rgba(255, 255, 255, 0.1);
+    }
+    #nav_check:checked ~ nav 
+    {
+        left: 0;
+    }
+    nav .logo
+    {
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+    nav ul li a 
+    {
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+    nav ul
+    {
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+    .hamberger
+    {
+        display: block;
+    }
+}
+
 
 
 /* html 
@@ -105,172 +236,10 @@ body
 
 /*SIDEBAR*/
 
-.side-bar{
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 180px;
-    height: 100vh;
-    background: #ffffff;
-    padding: 12px;
-    box-shadow: -3px -3px 7px #e0ebff, 
-                  3px 3px 5px #999999,
-                   -3px 7px #54545441,
-                    inset 3px 3px 5px #dcdcdc;
-    z-index: 1000;
-    transition: all 1s ease;
-    border-radius: 5px;
-}
-.side-bar .title 
-{
-    display: flex;
-    justify-content: space-evenly;
-}
-.side-bar .title .logo 
-{
-    font-size: 40px;
-    font-weight: 900;
-    color: #272c3e;
-    cursor: pointer;
-    text-decoration: none;
-    display: block;
-    position: relative;
-    font-family: 'Pixelify Sans';
-}
-.side-bar ul
-{
-    margin-top: 2px;
-    list-style: none;
-}
-.side-bar ul a
-{
-    color: #2c313e;
-    text-decoration: none;
-    display: block;
-    margin-top: 12px;
-    font-size: 15px;
-    font-weight: 300;
-    padding: 10px 25px;
-    background: #ffffff;
-    border-radius: 6px;
-    font-family: 'Mitr', sans-serif;
-    box-shadow: -3px -3px 7px #ffffff,
-                  3px 3px 5px #ffffffed;
-    position: relative;
-}
-.side-bar ul i 
-{
-    margin-right: 20px;
-}
-.media-icons
-{
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-}
-.media-icons a
-{
-    margin: 0 4px;
-    font-size: 14px;
-    cursor: pointer;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    text-decoration: none;
-    box-shadow: -3px -3px 7px #a4a4a4,
-                 3px 3px 5px #40c4a0;
-    position: relative;
-}
-
-.media-icons a:hover:before
-{
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset -3px -3px 7px #0cffce88,
-                inset 3px 3px 5px #00c8cb92;
-}
-.side-bar ul a:hover:before
-{
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset -3px -3px 7px #ffffff,
-                inset 3px 3px 5px #ffffff; 
-}
-.side-bar ul a:hover:before
-{
-    border-radius: 6px;
-}
-.side-bar ul a:hover
-{
-    color: #97b2c5;
-}
-.media-icons a:hover::before
-{
-    border-radius: 50%;
-}
-.media-icons a:nth-child(1)
-{
-    color: #2f78ff;
-}
-.media-icons a:nth-child(2)
-{
-    color: #b5165b;
-}
-.media-icons a:nth-child(3)
-{
-    color: #000000;
-}
-label
-{
-    font-size: 20px;
-    color: #9b9b9b;
-    box-shadow: -3px -3px 7px #08e6ba,
-                 3px 3px 5px #0091ff;
-    height: 37px;
-    width: 39px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 36px;
-    cursor: pointer;
-    transition: 0.5s ease;
-    z-index: 1000;
-}
-.bars
-{
-    position: absolute;
-    right: 15px;
-    top: 15px;
-
-}
-label:hover
-{
-    box-shadow: inset -3px -3px 7px #373737,
-                inset 3px 3px 5px #333333;
-    color: #5fb7ff;
-    transition: 0.5s ease;
-}
-#check
-{
-    display: none;
-}
-#check:checked ~ .side-bar
-{
-    left: 0;
-}
 
 
 
-#first
+/* #first
 {
     position: absolute;
     font-family: 'Pixelify Sans', sans-serif;
@@ -302,19 +271,19 @@ label:hover
     top: 180px;
     left: 80vh;
     overflow: hidden;
-}
+} */
 
 
 /*OOO*/
 
 .parallax
 {
-    overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
     z-index: -1000;
 }
 #eiei
@@ -329,178 +298,13 @@ label:hover
     position: absolute;
     display: flex;
     width: 100%;
-    height: 10px;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}
-
-/* .wrapper::before {
-    position: absolute;
-    content: '';
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    right: 10%;
-    top: 45%;
-    background: linear-gradient(45deg, rgb(136, 130, 211), #21f38aed);
-    animation: object1 7s linear infinite;
-}
-@keyframes  object1{
-    50%{
-        right: 8%;
-        top: 34%;
-    }
-}
-
-.wrapper::after {
-    position: absolute;
-    content: '';
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    left: 35%;
-    top: 5%;
-    background: linear-gradient(45deg, rgba(224, 182, 204, 0.956), #11d1bb74);
-    animation: object2 5s linear infinite;
-}
-@keyframes  object2{
-    50%{
-        left: 38%;
-        top: 7%;
-    }
-} */
-
-
-/* 
-.abstract1 {
-    position: absolute;
-    height: 25%;
-    width: 25%;
-    left: 60%;
-    top: 70%;
-    animation: object1 7s linear infinite;
-}
-@keyframes  object1{
-    50%{
-        left: 55%;
-        top: 65%;
-    }
-}
-
-.abstract2 {
-    position: absolute;
-    height: 30%;
-    width: 30%;
-    left: 25%;
-    top: 9%;
-    animation: object2 5s linear infinite;
-}
-@keyframes  object2{
-    50%{
-        left: 26%;
-        top: 7%;
-    }
-} */
-
-
-/* .box
-{
-    z-index: -10;
-    box-shadow: 0 0 18px #00e5ff,
-    0 0 30px #39af7c;
-} */
-
-/* .box div{
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: transparent;
-    border: 6px solid rgb(255, 65, 138);
-    border-radius: 34% 66% 69% 31% / 30% 48% 52% 70% ;
-    box-shadow: 0 0 50px#1c5996,
-    0 0 50px #00fff7;
-}
-.box div:nth-child(1){
-    top: 12%;
-    left: 42%;
-    animation: animate 10s linear infinite;
-    box-shadow: 0 0 18px #1c5996,
-    0 0 30px #00ffd9;
-}
-.box div:nth-child(2){
-    top: 70%;
-    left: 50%;
-    animation: animate 7s linear infinite;
-    box-shadow: 0 0 18px #1c5996,
-    0 0 30px #04ffff;
-}
-.box div:nth-child(3){
-    top: 17%;
-    left: 6%;
-    animation: animate 9s linear infinite;
-    box-shadow: 0 0 18px #1c5996,
-    0 0 30px #00fffb;
-}
-.box div:nth-child(4){
-    top: 20%;
-    left: 60%;
-    animation: animate 10s linear infinite;
-    box-shadow: 0 0 18px #1c5996,
-    0 0 30px #00ffd5;
-}
-.box div:nth-child(5){
-    top: 67%;
+    padding: 0 10%;
     left: 10%;
-    animation: animate 6s linear infinite;
-    box-shadow: 0 0 18px #1c5996,
-    0 0 30px #00ffd0;
 }
-.box div:nth-child(6){
-    top: 80%;
-    left: 70%;
-    animation: animate 12s linear infinite;
-    box-shadow: 0 0 18px #1c5996,
-    0 0 30px #00f2ff;
-}
-.box div:nth-child(7){
-    top: 60%;
-    left: 80%;
-    animation: animate 15s linear infinite;
-    box-shadow: 0 0 18px #1c5996,
-    0 0 30px #00ffe1;
-}
-.box div:nth-child(8){
-    top: 32%;
-    left: 25%;
-    animation: animate 16s linear infinite;
-    box-shadow: 0 0 18px #1c5996,
-    0 0 30px #00ffea;
-}
-.box div:nth-child(9){
-    top: 90%;
-    left: 25%;
-    animation: animate 9s linear infinite;
-    box-shadow: 0 0 18px #000dff,
-    0 0 30px #00f2ff;
-}
-.box div:nth-child(10){
-    top: 20%;
-    left: 70%;
-    animation: animate 12s linear infinite;
-    box-shadow: 0 0 18px #00fffb,
-    0 0 30px #0055ff;
-}
-@keyframes animate{
-    0%{
-        transform: scale(0) translateY(0) rotate(0);
-        opacity: 1;
-    }
-    100%{
-        transform: scale(1.3) translateY(-90px) rotate(360deg);
-        opacity: 0;
-    }
-} */
 
 
 
@@ -513,25 +317,20 @@ label:hover
     z-index: 5;
 }
 
-.topline {
-    display: block;
-    position: relative;
-    font-size: 35px;
-    letter-spacing: 5px;
-    color: #ffffff;
-}
+
 
 .heads {
+    position: relative;
     text-transform: uppercase;
     display: block;
-    font-size: 2.3em;
+    font-size: 3em;
     font-weight: 900;
     width: 80%;
     background-image: linear-gradient(
         -180deg,
         #ffffff 0%,
-        #606a8c 67%,
-        #17172f 100%
+        #ebebeb 69%,
+        #000000 100%
       );
     background-clip: border-box;
     color: #fff;
@@ -552,10 +351,11 @@ label:hover
 
 .text-title
 {
+    width: 100%;
     color: #ffffff;
-    font-weight: 850;
+    font-weight: 1000;
     text-transform: uppercase;
-    font-size: clamp(2rem, 8vw, 4rem);
+    font-size: 2rem;
     line-height: 0.75em;
     text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
      5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
@@ -563,36 +363,18 @@ label:hover
 .text-title span {
     display: block;
     position: relative;
-    top: 20px;
-    left: 100px;
+    left: 70px;
+    font-size: 3.5rem;
 }
 .text-title span:before {
     content: attr(data-text);
     position: absolute;
-    text-shadow: 2px 2px 1px #6c63a7, -1px -1px 1px #c800ff, -2px 2px 1px #f700ff, 1px -1px 1px #ffffff;
+    text-shadow: 2px 2px 1px #6c63a7, -1px -1px 1px #c800ff, -2px 2px 1px #0055ff, 1px -1px 1px #ffffff;
     z-index: 1;
     font-family: "Exo 2", sans-serif;
 }
 
-/* .multiText {
-    text-transform: uppercase;
-    background-image: linear-gradient(
-      -195deg,
-      #4b4b4b 0%,
-      #929292 50%,
-      #ffffff 100%
-    );
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 3s linear infinite;
-    display: inline-block;
-    font-size: 45px;
-} */
+
 
 @keyframes textclip {
   to {
@@ -602,11 +384,14 @@ label:hover
 
 
 .thai {
-    display: block;
+    position: relative;
+    display: flex;
     width: 90%;
     font-size: 1.2em;
     color: #838383;
-    font-family: 'Mitr', sans-serif;}
+    font-family: 'Mitr', sans-serif;
+    bottom: 30px;
+}
 
 
 
@@ -676,31 +461,16 @@ label:hover
   padding: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
-
-
-/* .hentai
-{
-    aspect-ratio: 960/540;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.layer1 
-{
-    background-image: url('hentai.svg');
-} */
 
 .sec
 {
     position: relative;
     padding: 0;
-    background: #16161600;
+    background: #161616;
     height: 1000vh;
+    z-index: 1000;
 }
-
+/* 
 .sec h2
 {
     width: 100%;
@@ -727,85 +497,18 @@ label:hover
     color: #fff;
     font-weight: 300;
     font-family: 'Mitr', sans-serif;  
-}
+} */
 
 
 
-/*Responsive*/
+/*------------------------------------Responsive--------------------------------------------*/
 
 
 
-@media screen and (max-width: 992px) {
-    .header {
-        padding: 1.3rem 5%;
-    }
-}
 
 
 
 @media screen and (max-width: 1600px) {
-    .parallax
-    {
-    overflow-y: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    width: 100%;
-}
-    .side-bar
-    {
-        height: 90vh;
-    }
-}
-
-
-@media screen and (max-width: 1180px) {
-    .parallax
-    {
-    overflow-y: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    width: 100%;
-}
-    .side-bar
-    {
-        height: 90vh;
-    }
-}
-@media screen and (max-width: 1024px){
-    .parallax {
-        height: 80vh;
-        width: 105%;
-    }
-    .side-bar
-    {
-        height: 80vh;
-    }
-
-}
-@media screen and (max-width: 820px) {
-    .parallax
-    {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    width: 110%;
-}
-.side-bar
-{
-    height: 90vh;
-}
-
-}
-@media screen and (max-width: 690px){
-
     .wrapper {
         position: absolute;
         display: flex;
@@ -817,14 +520,376 @@ label:hover
         overflow: hidden;
         font-size: 13px;
     }
-    .side-bar{
-        width: 200px;
-        height: 55vh;
+    .parallax
+    {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    }
+    .heads
+    {
+        text-transform: uppercase;
+        display: block;
+        font-size: 2.7em;
+        font-weight: 900;
+        width: 80%;
+        height: 100%;
+        bottom: 40px;
+    }
+    .text-title
+    {
+        color: #ffffff;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 48px;
+        line-height: 0.90em;
+        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
+        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
+    }
+    .text-title span {
+        display: block;
+        position: relative;
+        left: 90px;
+        bottom: 15px;
+    }
+        .thai
+        {
+            top: 15px;
+        }
+}
 
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        position: absolute;
+        display: flex;
+        width: 90%;
+        height: calc(100vh - 80px);
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+        overflow: hidden;
+        font-size: 13px;
+    }
+    .parallax
+    {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    }
+    .heads
+    {
+        text-transform: uppercase;
+        display: block;
+        font-size: 2.7em;
+        font-weight: 900;
+        width: 80%;
+        height: 100%;
+        bottom: 40px;
+    }
+    .text-title
+    {
+        color: #ffffff;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 48px;
+        line-height: 0.90em;
+        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
+        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
+    }
+    .text-title span {
+        display: block;
+        position: relative;
+        left: 90px;
+        bottom: 15px;
+    }
+        .thai
+        {
+            top: 15px;
+        }
+}
+
+/* --------------------------SCREEN 1024PX : IPad--------------------------- */
+
+@media screen and (max-width: 1024px){
+    .wrapper {
+        position: absolute;
+        display: flex;
+        width: 90%;
+        height: calc(100vh - 80px);
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+        overflow: hidden;
+        font-size: 13px;
+    }
+    .parallax
+    {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    }
+    .heads
+    {
+        text-transform: uppercase;
+        display: block;
+        font-size: 2.7em;
+        font-weight: 900;
+        width: 80%;
+        height: 100%;
+        bottom: 40px;
+    }
+    .text-title
+    {
+        color: #ffffff;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 48px;
+        line-height: 0.90em;
+        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
+        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
+    }
+    .text-title span {
+        display: block;
+        position: relative;
+        left: 90px;
+        bottom: 15px;
+    }
+        .thai
+        {
+            top: 15px;
+        }
+    }
+/* --------------------------SCREEN 900PX :--------------------------- */
+
+@media screen and (max-width: 900px){
+    .wrapper {
+        position: absolute;
+        display: flex;
+        width: 90%;
+        height: calc(100vh - 80px);
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+        overflow: hidden;
+        font-size: 13px;
+    }
+    .parallax
+    {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    }
+    .heads
+    {
+        text-transform: uppercase;
+        display: block;
+        font-size: 2.8em;
+        font-weight: 900;
+        width: 80%;
+        height: 100%;
+        bottom: 40px;
+    }
+    .text-title
+    {
+        color: #ffffff;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 47px;
+        line-height: 0.90em;
+        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
+        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
+    }
+    .text-title span {
+        display: block;
+        position: relative;
+        left: 80px;
+        bottom: 15px;
+    }
+        .thai
+        {
+            top: 15px;
+        }
+}
+/* --------------------------SCREEN 820PX : ipad mini--------------------------- */
+
+@media screen and (max-width: 820px) {
+        .wrapper {
+            position: absolute;
+            display: flex;
+            width: 90%;
+            height: calc(100vh - 80px);
+            justify-content: center;
+            align-items: center;
+            padding: 0 10%;
+            overflow: hidden;
+            font-size: 13px;
+        }
+        .parallax
+        {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        }
+        .heads
+        {
+            text-transform: uppercase;
+            display: block;
+            font-size: 2.2em;
+            font-weight: 900;
+            width: 80%;
+            height: 100%;
+            bottom: 40px;
+        }
+        .text-title
+        {
+            color: #ffffff;
+            font-weight: 1000;
+            text-transform: uppercase;
+            font-size: 38px;
+            line-height: 0.90em;
+            text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
+            5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
+        }
+        .text-title span {
+            display: block;
+            position: relative;
+            left: 50px;
+            bottom: 15px;
+        }
+            .thai
+            {
+                top: 15px;
+            }
     }
 
+/* --------------------------SCREEN 768PX : ipad mini--------------------------- */
 
+@media screen and (max-width: 768px){
+    .wrapper {
+        position: absolute;
+        display: flex;
+        width: 90%;
+        height: calc(100vh - 80px);
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+        overflow: hidden;
+        font-size: 13px;
+    }
+    .parallax
+    {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    }
+    .heads
+    {
+        text-transform: uppercase;
+        display: block;
+        font-size: 2.2em;
+        font-weight: 900;
+        width: 80%;
+        height: 100%;
+        bottom: 40px;
+    }
+    .text-title
+    {
+        color: #ffffff;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 38px;
+        line-height: 0.90em;
+        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
+        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
+    }
+    .text-title span {
+        display: block;
+        position: relative;
+        left: 50px;
+        bottom: 15px;
+    }
+        .thai
+        {
+            top: 15px;
+        }
 }
+
+/* --------------------------SCREEN 600PX : BIG Phone--------------------------- */
+
+
+@media screen and (max-width: 600px){
+    .wrapper {
+        position: absolute;
+        display: flex;
+        width: 90%;
+        height: calc(100vh - 80px);
+        justify-content: center;
+        align-items: center;
+        padding: 0 10%;
+        overflow: hidden;
+        font-size: 13px;
+    }
+    .parallax
+    {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    }
+    .heads
+    {
+        text-transform: uppercase;
+        display: block;
+        font-size: 2.2em;
+        font-weight: 900;
+        width: 80%;
+        height: 100%;
+        bottom: 40px;
+    }
+    .text-title
+    {
+        color: #ffffff;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 38px;
+        line-height: 0.90em;
+        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
+        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
+    }
+    .text-title span {
+        display: block;
+        position: relative;
+        left: 50px;
+        bottom: 15px;
+    }
+        .thai
+        {
+            top: 15px;
+        }
+}
+/* --------------------------SCREEN 500PX : BIG Phone--------------------------- */
+
 
 @media screen and (max-width: 500px) {
     .sec {
@@ -837,41 +902,152 @@ label:hover
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     }
-    .wrapper {
-        font-size: 10px;
-    }
-    h1
+    .heads
     {
-        font-size: 50px;
+        text-transform: uppercase;
+        display: block;
+        font-size: 2.2em;
+        font-weight: 900;
+        width: 80%;
+        height: 100%;
+        bottom: 40px;
     }
-    p
+    .text-title
     {
-        font-size: 15px;
+        color: #ffffff;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 38px;
+        line-height: 0.90em;
+        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
+        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
     }
-}
-@media screen and (max-width: 428px) {
+    .text-title span {
+        display: block;
+        position: relative;
+        left: 50px;
+        bottom: 55px;
+    }
+        .thai
+        {
+            bottom: 20px;
+        }
+    }
+/* --------------------------SCREEN 480PX : BIG Phone--------------------------- */
+
+@media screen and (max-width: 480px) {
     .parallax
     {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 100vh;
     width: 120%;
     }   
-    .side-bar
+    .heads
     {
-        height: 70vh;
+        text-transform: uppercase;
+        display: block;
+        font-size: 2.2em;
+        font-weight: 900;
+        width:90%;
+        height: 100%;
     }
-}
+    .text-title
+    {
+        color: #ffffff;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 38px;
+    }
+    .text-title span {
+        display: block;
+        position: relative;
+        left: 40px;
+        bottom: 40px;
+    }
+        .thai
+        {
+            top: 8px;
+        }
+    }
+/* --------------------------SCREEN 418PX : BIG Phone--------------------------- */
+
+
+@media screen and (max-width: 418px) {
+        .parallax
+        {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 120%;
+        }   
+
+        .heads
+        {
+            font-size: 25px;
+        }
+        .text-title
+    {
+        color: #ffffff;
+        font-weight: 1000;
+        text-transform: uppercase;
+        font-size: 32px;
+    }
+    .text-title span {
+        display: block;
+        position: relative;
+        left: 30px;
+        bottom: 35px;
+    }
+    }
 
 /* ---------------------------SCREEN 360 PX : Phone ----------------------------- */
 
 
 @media screen and (max-width: 360px) {
+    .heads
+    {
+        font-size: 23px;
+    }
+
+    .text-title {
+        font-size: 30px;
+    }
+
+    .text-title span {
+        display: block;
+        position: relative;
+        left: 45px;
+        bottom: 35px;
+    }
+    .thai
+    {
+        font-size: 13px;
+    }
+
+    .parallax
+    {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    overflow-x: hidden;
+    }   
+
+}
+
+/* ---------------------------SCREEN 320 PX : Phone ----------------------------- */
+
+@media only screen and (max-width: 320px) {
 
 
     .parallax
@@ -880,50 +1056,14 @@ label:hover
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 90vh;
     width: 100%;
     overflow-x: hidden;
-    }   
-
-    .side-bar
-    {
-        width: 160px;
-        height: 78vh;
-    }
-
-    .side-bar .title .logo 
-    {
-        margin-top: 2px;
-        font-size: 25px;
-        font-weight: 700;
-    }
-
-    .side-bar ul a
-    {
-    margin-top: 2px;
-    font-size: 12px;
-    font-weight: 200;
-    }
-    .media-icons a
-    {
-        font-size: 12px;
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        line-height: 30px;
-    }
-    .media-icons
-    {
-        margin-top: 98px;
-    }
-}
-
-/* ---------------------------SCREEN 320 PX : Phone ----------------------------- */
-
-@media screen and (max-width: 320px) {
+    }  
 
     .heads {
-        width: 95%;
+        width: 90%;
+        font-size: 22px;
     }
 
     .lines
@@ -940,13 +1080,18 @@ label:hover
     {
         color: #ffffff;
         font-weight: 800;
-        font-size: 30px;
+        font-size: 28px;
         line-height: 0.90em;
+        width: 100%;
       }
       .text-title span {
         display: block;
         position: relative;
-        bottom: px;
-        left: 70px;
+        left: 30px;
+        bottom: 35px;
+    }
+    .thai
+    {
+        font-size: 12px;
     }
 }
