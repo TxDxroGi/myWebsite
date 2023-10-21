@@ -18,71 +18,40 @@
 
 </head>
 <body>
+    <header>
+        <div class="logo">MxKSP</div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <div class="logo">MxKSP</div>
+            <ul>
+                <li>
+                    <a href="" class="active">| Home</a>
+                </li>
+                <li>
+                    <a href="">| About</a>
+                </li>
+                <li>
+                    <a href="">| Work</a>
+                </li>
+                <li>
+                    <a href="">| Contact</a>
+                </li>
+                <li>
+                    <a href=""></a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamberger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
 
-
-    
-    <input type="checkbox" id="check">
-    <label class="button bars" for="check"><i class="fas fa-list"></i></label>
-    <div class="side-bar">
-        <ul class="title">
-
-            <li><a href="https://iimaxx.netlify.app" class="logo">I'MaX</a></li>
-        </ul>
-        <ul>
-            <li><a href="index.html"><i class='fas fa-home'></i>Home</a></li>
-            <li><a href="#"><i class="fas fa-info-circle"></i>About</a></li>
-            <li><a href="#"><i class="fa fa-user-plus"></i>Contact</a></li>
-            <li><a href="#"><i class="fa fa-bookmark"></i>Portflio</a></li>
-            <li><a href="https://youtu.be/rV5ynCW-kVw?si=MZSwrAYdP_75IVrD"><i class="fas fa-eye-slash"></i>อย่าคลิ๊ก</a></li>
-        </ul>
-        <div class="media-icons">
-            <a href="https://www.facebook.com/profile.php?id=100008165986129"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/iim_axx/"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/TxDxroGi"><i class="fab fa-github"></i></a>
-        </div>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
 
-    <!-- HTML background -->
-    <!-- <style class="html">
-        html {
-    height: 120vh;
-    width: 100%;
-    background: linear-gradient(45deg,#72b2b7,#ffffff,rgba(84, 122, 236, 0.529));
-    background-size: 200% 200%;
-    animation: color 4s ease-in-out infinite;
-}
-@keyframes color{
-    0%{
-        background-position: 0 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0 50%;
-    }
-}
-    </style> -->
-
-    <!-- <img src="absnew.png" class="abstract1">
-    <img src="deploy2.png" class="abstract2"> -->
-
-
-    <!-- <div class="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div> -->
 
     <!---glow-->
     <div class="lines">
@@ -93,16 +62,7 @@
 
 
       
-<!-- 
-<div class="inhead">
-      <p id="first">echo "Who is max";</p>
-      <p id="second">console.log("I want coding");</p>
-      <p id="third">puts "My postfolio"</p>
-      <!-- <p class="word">echo "Who is max";</p>
-      <p class="word">echo "Who is max";</p> -->
-      </div> -->
-     
-<!--Parallax-->
+
 
 
     <section class="parallax">
@@ -125,6 +85,8 @@
             </div>
         </div>
 
+        <section class="sec"></section>
+
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
         <!-- <script>
             var typingEffect = new Typed(".multiText",{
@@ -136,23 +98,7 @@
             }) -->
             
             </script>
-            <script>
-                let menuToggle = document.querySelector('.menuToggle');
-                let sidebar = document.querySelector('.sidebar');
-                menuToggle.onclick = function(){
-                    menuToggle.classList.toggle('active');
-                    sidebar.classList.toggle('active');
-                }
 
-                let menu = document.querySelectorAll('.menu li');
-                function activeLink(){
-                    menu.forEach((item) =>
-                    item.classList.remove('active'));
-                    this.classList.add('active')
-                }
-                menu.forEach((item)=>
-                item.addEventListener('click',activeLink));
-            </script>
 
 
     </section>
@@ -211,42 +157,6 @@
     
       </script>
 
-      <!-- <script>
-        gsap.registerPlugin(ScrollTrigger)
-
-        const splitTypes = document.querySelectorAll('.w1')
-
-        splitTypes.forEach((char,i) => {
-
-            const text = next SplitTypes(char, { types: 'chars'})
-
-            gsap.from(text.chars, {
-                scrollTrigger: {
-                    trigger: char,
-                    start: 'top 80%',
-                    end: 'top 20%',
-                    scrup: false,
-                    markers: false
-                },
-                opcity: 0.2,
-                stagger: 0.1
-            })
-        })
-
-        const lenis = new Lenis()
-
-        lenis.on('scroll', (e) => {
-        console.log(e)
-        })
-
-        function ref(time) {
-        lenis.ref(time)
-        requestAnimationFrame(ref)
-        }
-
-        requestAnimationFrame(ref)
-
-      </script> -->
     </div>
     
    </body>
