@@ -239,41 +239,6 @@ nav ul li a.active
 
 
 
-/* #first
-{
-    position: absolute;
-    font-family: 'Pixelify Sans', sans-serif;
-    color: #4e4e4e75;
-    font-size: 1.5em;
-    font-weight: 600;
-    top: 10vh;
-    left: 10vh;
-}
-
-#second
-{
-    position: absolute;
-    font-family: 'Pixelify Sans', sans-serif;
-    color: #4e4e4e52;
-    font-size: 1.3em;
-    font-weight: 600;
-    top: 70vh;
-    left: 60vh;
-}
-
-#third
-{
-    position: absolute;
-    font-family: 'Pixelify Sans';
-    color: #4e4e4e4e;
-    font-size: 1.5em;
-    font-weight: 600;
-    top: 180px;
-    left: 80vh;
-    overflow: hidden;
-} */
-
-
 /*OOO*/
 
 .parallax
@@ -364,7 +329,7 @@ nav ul li a.active
     display: block;
     position: relative;
     left: 70px;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 .text-title span:before {
     content: attr(data-text);
@@ -462,14 +427,6 @@ nav ul li a.active
 }
 
 
-.sec
-{
-    position: relative;
-    padding: 0;
-    background: #161616;
-    height: 1000vh;
-    z-index: 1000;
-}
 /* 
 .sec h2
 {
@@ -816,7 +773,7 @@ nav ul li a.active
         color: #ffffff;
         font-weight: 1000;
         text-transform: uppercase;
-        font-size: 38px;
+        font-size: 37px;
         line-height: 0.90em;
         text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
         5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
@@ -872,7 +829,7 @@ nav ul li a.active
         color: #ffffff;
         font-weight: 1000;
         text-transform: uppercase;
-        font-size: 38px;
+        font-size: 30px;
         line-height: 0.90em;
         text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
         5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
