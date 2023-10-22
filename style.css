@@ -900,22 +900,7 @@ nav ul li a.active
         height: 100%;
         bottom: 40px;
     }
-    .text-title
-    {
-        color: #ffffff;
-        font-weight: 1000;
-        text-transform: uppercase;
-        font-size: 47px;
-        line-height: 0.90em;
-        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
-        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
-    }
-    .text-title span {
-        display: block;
-        position: relative;
-        left: 80px;
-        bottom: 15px;
-    }
+   
         .thai
         {
             top: 15px;
@@ -954,22 +939,7 @@ nav ul li a.active
             height: 100%;
             bottom: 40px;
         }
-        .text-title
-        {
-            color: #ffffff;
-            font-weight: 1000;
-            text-transform: uppercase;
-            font-size: 38px;
-            line-height: 0.90em;
-            text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
-            5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
-        }
-        .text-title span {
-            display: block;
-            position: relative;
-            left: 50px;
-            bottom: 15px;
-        }
+     
             .thai
             {
                 top: 15px;
@@ -1009,22 +979,7 @@ nav ul li a.active
         height: 100%;
         bottom: 40px;
     }
-    .text-title
-    {
-        color: #ffffff;
-        font-weight: 1000;
-        text-transform: uppercase;
-        font-size: 37px;
-        line-height: 0.90em;
-        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
-        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
-    }
-    .text-title span {
-        display: block;
-        position: relative;
-        left: 50px;
-        bottom: 15px;
-    }
+   
         .thai
         {
             top: 15px;
@@ -1065,22 +1020,7 @@ nav ul li a.active
         height: 100%;
         bottom: 40px;
     }
-    .text-title
-    {
-        color: #ffffff;
-        font-weight: 1000;
-        text-transform: uppercase;
-        font-size: 30px;
-        line-height: 0.90em;
-        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
-        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
-    }
-    .text-title span {
-        display: block;
-        position: relative;
-        left: 50px;
-        bottom: 15px;
-    }
+  
         .thai
         {
             top: 15px;
@@ -1113,22 +1053,7 @@ nav ul li a.active
         height: 100%;
         bottom: 40px;
     }
-    .text-title
-    {
-        color: #ffffff;
-        font-weight: 1000;
-        text-transform: uppercase;
-        font-size: 38px;
-        line-height: 0.90em;
-        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
-        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
-    }
-    .text-title span {
-        display: block;
-        position: relative;
-        left: 50px;
-        bottom: 55px;
-    }
+ 
         .thai
         {
             bottom: 20px;
@@ -1155,20 +1080,7 @@ nav ul li a.active
         width:90%;
         height: 100%;
     }
-    .text-title
-    {
-        color: #ffffff;
-        font-weight: 1000;
-        text-transform: uppercase;
-        font-size: 34px;
-    }
-    .text-title span {
-        display: block;
-        position: relative;
-        left: 40px;
-        bottom: 40px;
-        font-size: 34px;
-    }
+  
         .thai
         {
             top: 8px;
@@ -1192,19 +1104,7 @@ nav ul li a.active
         {
             font-size: 25px;
         }
-        .text-title
-    {
-        color: #ffffff;
-        font-weight: 1000;
-        text-transform: uppercase;
-        font-size: 32px;
-    }
-    .text-title span {
-        display: block;
-        position: relative;
-        left: 30px;
-        bottom: 35px;
-    }
+       
     }
 
 /* ---------------------------SCREEN 360 PX : Phone ----------------------------- */
@@ -1215,17 +1115,7 @@ nav ul li a.active
     {
         font-size: 23px;
     }
-
-    .text-title {
-        font-size: 30px;
-    }
-
-    .text-title span {
-        display: block;
-        position: relative;
-        left: 45px;
-        bottom: 35px;
-    }
+
     .thai
     {
         font-size: 13px;
@@ -1274,21 +1164,7 @@ nav ul li a.active
     {
         height: 150vh;
         left: 40%;
-    }
-    .text-title
-    {
-        color: #ffffff;
-        font-weight: 800;
-        font-size: 28px;
-        line-height: 0.90em;
-        width: 100%;
-      }
-      .text-title span {
-        display: block;
-        position: relative;
-        left: 30px;
-        bottom: 35px;
-    }
+    }
     .thai
     {
         font-size: 12px;
