@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Poppins:wght@500&family=Righteous&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
 *
 {
     margin: 0;
@@ -303,6 +304,7 @@ nav ul li a.active
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     height: 80px;
+    font-family: 'Fira Code', monospace;
 }
 
 .big 
