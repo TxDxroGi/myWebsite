@@ -288,13 +288,13 @@ nav ul li a.active
     position: relative;
     text-transform: uppercase;
     display: block;
-    font-size: 3em;
+    font-size: 1.5em;
     font-weight: 900;
     width: 80%;
     background-image: linear-gradient(
         -180deg,
         #ffffff 0%,
-        #ebebeb 69%,
+        #bebebe 70%,
         #000000 100%
       );
     background-clip: border-box;
