@@ -246,7 +246,7 @@ nav ul li a.active
 
 /*OOO*/
 
-.parallax
+/* .parallax
 {
     position: relative;
     display: flex;
@@ -255,7 +255,7 @@ nav ul li a.active
     height: 100vh;
     width: 100%;
     z-index: -1000;
-}
+} */
 #eiei
 {
     top:50%;
@@ -265,7 +265,7 @@ nav ul li a.active
 }
 
 .wrapper {
-    position: absolute;
+    position: relative;
     display: flex;
     width: 100%;
     height: 100vh;
@@ -289,7 +289,7 @@ nav ul li a.active
 
 
 
-.main {
+.heads {
     position: relative;
     text-transform: uppercase;
     display: block;
@@ -302,7 +302,7 @@ nav ul li a.active
         #bebebe 70%,
         #000000 100%
       );
-    background-clip: border-box;
+    background-clip: border-box;    
     color: #fff;
     background-clip: text;
     -webkit-background-clip: text;
@@ -313,16 +313,17 @@ nav ul li a.active
 
 
 .container {
-    position: absolute;
+    position: relative;
     transform: translate(-50%, -50%);
-    top: 52%;
-    left: 22.5%;
+    display: flex;
+    bottom: 35%;
+    left: 50%;
   }
 
   .glitch {
     color: rgb(255, 255, 255);
     position: relative;
-    font-size: 5.3vw;
+    font-size: 4.5em;
     /* // margin: 70px 200px; */
     animation: glitch 3s 3s infinite;
     font-weight: 1000;
@@ -591,12 +592,11 @@ nav ul li a.active
 
 .thai {
     position: relative;
-    display: flex;
     width: 90%;
     font-size: 1.2em;
     color: #838383;
     font-family: 'Mitr', sans-serif;
-    bottom: 30px;
+    top: 50%;
 }
 
 
@@ -718,15 +718,6 @@ nav ul li a.active
         overflow: hidden;
         font-size: 13px;
     }
-    .parallax
-    {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    }
     .heads
     {
         text-transform: uppercase;
@@ -736,22 +727,6 @@ nav ul li a.active
         width: 80%;
         height: 100%;
         bottom: 40px;
-    }
-    .text-title
-    {
-        color: #ffffff;
-        font-weight: 1000;
-        text-transform: uppercase;
-        font-size: 48px;
-        line-height: 0.90em;
-        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
-        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
-    }
-    .text-title span {
-        display: block;
-        position: relative;
-        left: 90px;
-        bottom: 15px;
     }
         .thai
         {
@@ -772,15 +747,7 @@ nav ul li a.active
         overflow: hidden;
         font-size: 13px;
     }
-    .parallax
-    {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    }
+
     .heads
     {
         text-transform: uppercase;
@@ -790,22 +757,6 @@ nav ul li a.active
         width: 80%;
         height: 100%;
         bottom: 40px;
-    }
-    .text-title
-    {
-        color: #ffffff;
-        font-weight: 1000;
-        text-transform: uppercase;
-        font-size: 48px;
-        line-height: 0.90em;
-        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
-        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
-    }
-    .text-title span {
-        display: block;
-        position: relative;
-        left: 90px;
-        bottom: 15px;
     }
         .thai
         {
@@ -827,15 +778,6 @@ nav ul li a.active
         overflow: hidden;
         font-size: 13px;
     }
-    .parallax
-    {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    }
     .heads
     {
         text-transform: uppercase;
@@ -846,27 +788,12 @@ nav ul li a.active
         height: 100%;
         bottom: 40px;
     }
-    .text-title
-    {
-        color: #ffffff;
-        font-weight: 1000;
-        text-transform: uppercase;
-        font-size: 48px;
-        line-height: 0.90em;
-        text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
-        5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
-    }
-    .text-title span {
-        display: block;
-        position: relative;
-        left: 90px;
-        bottom: 15px;
-    }
         .thai
         {
             top: 15px;
         }
     }
+
 /* --------------------------SCREEN 900PX :--------------------------- */
 
 @media screen and (max-width: 900px){
@@ -881,15 +808,7 @@ nav ul li a.active
         overflow: hidden;
         font-size: 13px;
     }
-    .parallax
-    {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    }
+
     .heads
     {
         text-transform: uppercase;
@@ -920,15 +839,7 @@ nav ul li a.active
             overflow: hidden;
             font-size: 13px;
         }
-        .parallax
-        {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        width: 100%;
-        }
+
         .heads
         {
             text-transform: uppercase;
@@ -960,15 +871,6 @@ nav ul li a.active
         overflow: hidden;
         font-size: 13px;
     }
-    .parallax
-    {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    }
     .heads
     {
         text-transform: uppercase;
@@ -979,7 +881,6 @@ nav ul li a.active
         height: 100%;
         bottom: 40px;
     }
-   
         .thai
         {
             top: 15px;
@@ -1001,15 +902,7 @@ nav ul li a.active
         overflow: hidden;
         font-size: 13px;
     }
-    .parallax
-    {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    }
+
     .heads
     {
         text-transform: uppercase;
@@ -1034,15 +927,7 @@ nav ul li a.active
         padding: 8%;
         font-size: 15px;
     }
-    .parallax
-    {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    }
+
     .heads
     {
         text-transform: uppercase;
@@ -1062,15 +947,7 @@ nav ul li a.active
 /* --------------------------SCREEN 480PX : BIG Phone--------------------------- */
 
 @media screen and (max-width: 480px) {
-    .parallax
-    {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    width: 120%;
-    }   
+  
     .heads
     {
         text-transform: uppercase;
@@ -1090,15 +967,7 @@ nav ul li a.active
 
 
 @media screen and (max-width: 418px) {
-        .parallax
-        {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        width: 120%;
-        }   
+
 
         .heads
         {
@@ -1115,22 +984,17 @@ nav ul li a.active
     {
         font-size: 23px;
     }
-
+
+
     .thai
     {
         font-size: 13px;
     }
 
-    .parallax
+    .glitch
     {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    width: 100%;
-    overflow-x: hidden;
-    }   
+        font-size: 2.6em;
+    }
 
 }
 
@@ -1139,16 +1003,6 @@ nav ul li a.active
 @media only screen and (max-width: 320px) {
 
 
-    .parallax
-    {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    width: 100%;
-    overflow-x: hidden;
-    }  
 
     .heads {
         width: 90%;
@@ -1164,7 +1018,8 @@ nav ul li a.active
     {
         height: 150vh;
         left: 40%;
-    }
+    }
+
     .thai
     {
         font-size: 12px;
