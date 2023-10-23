@@ -952,12 +952,16 @@ nav ul li a.active
     {
         text-transform: uppercase;
         display: block;
-        font-size: 2.2em;
+        font-size: 1.6em;
         font-weight: 900;
-        width:90%;
+        width:100%;
         height: 100%;
     }
-  
+    
+    .glitch
+    {
+        font-size: 3em;
+    }
         .thai
         {
             top: 8px;
