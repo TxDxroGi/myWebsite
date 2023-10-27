@@ -613,12 +613,12 @@ nav ul li a.active
 .about h2
 {
     font-size: 3em;
-    color: #cecece;
+    color: #fff;
 }
 .about p
 {
     font-size: 2em;
-    color: #cecece;
+    color: #fff;
     font-weight: 500;
 }
 
