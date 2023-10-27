@@ -600,8 +600,8 @@ nav ul li a.active
 
 .about
 {
-    background: rgb(30,29,40);
-    background: linear-gradient(152deg, rgba(30,29,40,1) 0%, rgba(44,55,89,1) 44%, rgba(90,166,255,1) 92%, rgba(38,92,173,1) 100%);
+    background: rgb(24,38,43);
+    background: linear-gradient(152deg, rgba(24,38,43,1) 0%, rgba(35,42,57,1) 48%, rgba(0,0,0,1) 92%, rgba(38,92,173,1) 100%);
     position: absolute;
     height: 1000vh;
     align-items: center;
