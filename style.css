@@ -600,14 +600,15 @@ nav ul li a.active
 
 .about
 {
-    background: linear-gradient(-100deg, #090909, rgb(35, 42, 57));
+    background: linear-gradient(100deg, #090909, rgb(35, 42, 57));
     position: absolute;
-    height: 1000vh;
+    height: 700vh;
     align-items: center;
     top: 100vh;
-    padding: 200px;
+    padding: 100px;
     margin: 0;
     overflow-x: hidden;
+    width: 100%;
 }
 .about h2
 {
@@ -616,7 +617,7 @@ nav ul li a.active
 }
 .about p
 {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #fff;
     font-weight: 500;
 }
