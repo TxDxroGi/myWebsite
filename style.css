@@ -23,7 +23,7 @@ body
 {
     background-size: cover;
     background-position: center;
-    background: linear-gradient(-100deg, #090909, rgb(35, 42, 57));
+    background: linear-gradient(-100deg, #090909, rgb(30, 35, 45));
     height: 120vh;
     overflow-x: hidden;
     margin: 0;
@@ -46,19 +46,15 @@ header
     width: 120px;
     margin-top: 8px;
     font-size: 35px;
-    font-weight: 1000;
-    text-transform: uppercase;
-    background-image: linear-gradient(
-        -180deg,
-        #ffffff 0%,
-        #ffffff 69%,
-        #ffffff 100%
-      );    
-    background-clip: border-box;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;    
     font-family: 'Tilt Neon', sans-serif;
+    background-image: linear-gradient(90deg, #8361ff, #01fffb);
+    background-position: bottom ;
+    background-size: 100% 11%;
+    background-repeat: no-repeat;
+    border-radius: 12px;
 }
 nav .logo
 {
@@ -82,11 +78,6 @@ nav ul li a:hover
 {
     background: #57575774;
 }
-nav ul li a.active
-{
-    background: #595959f0;
-    color: #fff;
-}
 .hamberger
 {
     display: none;
@@ -96,10 +87,7 @@ nav ul li a.active
     border-radius: 5px;
     transition: 0.2s;
 }
-.hamberger:hover
-{
-    background: #565656;
-}
+
 .hamberger div
 {
     width: 30px;
@@ -123,9 +111,9 @@ nav ul li a.active
         z-index: 999;
         width: 280px;
         height: 100vh;
-        background-color: transparent;
+        background-color: #111;
         transition: 1s;
-        box-shadow: 2px 0 20px 0 rgba(255, 255, 255, 0.1);
+        /* box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.522); */
     }
     #nav_check:checked ~ nav 
     {
@@ -210,11 +198,12 @@ nav ul li a.active
     width: 100%;
     top: -50%;
     left: 0;
-    background: linear-gradient(to bottom, rgb(167, 255, 226) 0%, #00bcc9 50%, #4b1ffc 100%);
+    background: linear-gradient(to bottom, rgb(167, 255, 226) 0%,
+     #00bcc9 50%, #4b1ffc 100%);
     animation: drop 4s 0s infinite;
     animation-fill-mode: forwards; 
     box-shadow: 1px 2px 4px
-    #fc2dcf;
+    #0efbff;
 }
 .line:nth-child(1) {
     margin-left: -10%;
@@ -241,29 +230,11 @@ nav ul li a.active
 
 
 
-/*SIDEBAR*/
-
-
-
-
-/*OOO*/
-
-/* .parallax
-{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    z-index: -1000;
-} */
-
 .wrapper {
     position: relative;
     display: flex;
     width: 90%;
-    height: 100%;
+    height: 80%;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -282,28 +253,30 @@ nav ul li a.active
     z-index: 5;
 }
 
-
-
-.heads {
-    position: relative;
-    text-transform: uppercase;
-    display: block;
-    font-size: 2em;
-    font-weight: 1000;
-    width: 80%;
-    background-image: linear-gradient(
-        -180deg,
-        #ffffff 0%,
-        #ffffff 70%,
-        #ffffff 100%
-      );
-    background-clip: border-box;    
-    color: #fff;
+.text-clear
+{
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 12px 10px 8px#000000;
+    background-image: #fff;
+    -webkit-text-stroke-color: transparent;
     background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    height: 150px;
+    padding: 6px;
+    color: transparent;
+    letter-spacing: 3.4px;
+    -webkit-text-stroke: 1px white;
+}
+
+.text-main {
+    position: relative;
+    font-size: 3em;
+    font-weight: 1000;
+    width: 80%;   
+    color: #fff;
+    height: 100px;
     font-family: 'Josefin Sans', sans-serif;
+    line-height: -5;
+    text-shadow: 12px 10px 10px#000000;
 }
 
 
@@ -323,6 +296,7 @@ nav ul li a.active
     animation: glitch 3s 3s infinite;
     font-weight: 1000;
     font-family: 'Russo One', sans-serif;
+    text-shadow: 12px 10px 10px#000000;
   }
   .glitch::before {
     content: attr(data-text);
@@ -542,56 +516,18 @@ nav ul li a.active
    }
 }
 
-/* .big 
-{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    transform: skew(0, -10deg);
-}
-
-
-.text-title
-{
-    width: 100%;
-    color: #ffffff;
-    font-weight: 1000;
-    text-transform: uppercase;
-    font-size: 2rem;
-    line-height: 0.75em;
-    text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
-     5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb, 9px 7px 1px #4af7ff;
-  }
-.text-title span {
-    display: block;
-    position: relative;
-    left: 70px;
-    font-size: 3rem;
-}
-.text-title span:before {
-    content: attr(data-text);
-    position: absolute;
-    text-shadow: 2px 2px 1px #6c63a7, -1px -1px 1px #c800ff, -2px 2px 1px #0055ff, 1px -1px 1px #ffffff;
-    z-index: 1;
-    font-family: "Exo 2", sans-serif;
-}
 
 
 
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-} */
 
 
-.thai {
+.discilp {
     position: relative;
     width: 90%;
     font-size: 1.2em;
     color: #838383;
     font-family: 'Mitr', sans-serif;
-    top: 50%;
+    top: 0;
 }
 
 
@@ -600,12 +536,12 @@ nav ul li a.active
 
 .about
 {
-    background: linear-gradient(100deg, #090909, rgb(35, 42, 57));
+    background: #121212;
     position: absolute;
     height: 700vh;
     align-items: center;
-    top: 100vh;
-    padding: 100px;
+    justify-content: center;
+    padding: 80px;
     margin: 0;
     overflow-x: hidden;
     width: 100%;
@@ -633,7 +569,7 @@ nav ul li a.active
 
 
 
-@media screen and (max-width: 1600px) {
+/* @media screen and (max-width: 1600px) {
     .wrapper {
         position: absolute;
         display: flex;
@@ -645,9 +581,8 @@ nav ul li a.active
         overflow: hidden;
         font-size: 13px;
     }
-    .heads
+    .text-main
     {
-        text-transform: uppercase;
         display: block;
         font-size: 2.5em;
         font-weight: 900;
@@ -655,16 +590,16 @@ nav ul li a.active
         height: 100%;
         bottom: 40px;
     }
-        .thai
+        .discilp
         {
             top: 15px;
         }
-}
+} */
 
 
 @media screen and (max-width: 1200px) {
     .wrapper {
-        position: absolute;
+        position: relative;
         display: flex;
         width: 90%;
         height: calc(100vh - 80px);
@@ -675,9 +610,8 @@ nav ul li a.active
         font-size: 13px;
     }
 
-    .heads
+    .text-main
     {
-        text-transform: uppercase;
         display: block;
         font-size: 2.7em;
         font-weight: 900;
@@ -685,7 +619,7 @@ nav ul li a.active
         height: 100%;
         bottom: 40px;
     }
-        .thai
+        .discilp
         {
             top: 15px;
         }
@@ -695,7 +629,7 @@ nav ul li a.active
 
 @media screen and (max-width: 1024px){
     .wrapper {
-        position: absolute;
+        position: relative;
         display: flex;
         width: 90%;
         height: calc(100vh - 80px);
@@ -705,9 +639,8 @@ nav ul li a.active
         overflow: hidden;
         font-size: 13px;
     }
-    .heads
+    .text-main
     {
-        text-transform: uppercase;
         display: block;
         font-size: 2.7em;
         font-weight: 900;
@@ -715,7 +648,7 @@ nav ul li a.active
         height: 100%;
         bottom: 40px;
     }
-        .thai
+        .discilp
         {
             top: 15px;
         }
@@ -725,8 +658,7 @@ nav ul li a.active
 
 @media screen and (max-width: 900px){
     .wrapper {
-        position: absolute;
-        display: flex;
+        position: relative;
         width: 90%;
         height: calc(100vh - 80px);
         justify-content: center;
@@ -736,18 +668,15 @@ nav ul li a.active
         font-size: 13px;
     }
 
-    .heads
+    .text-main
     {
-        text-transform: uppercase;
-        display: block;
         font-size: 2.8em;
         font-weight: 900;
         width: 80%;
         height: 100%;
         bottom: 40px;
     }
-   
-        .thai
+        .discilp
         {
             top: 15px;
         }
@@ -756,7 +685,7 @@ nav ul li a.active
 
 @media screen and (max-width: 820px) {
         .wrapper {
-            position: absolute;
+            position: relative;
             display: flex;
             width: 90%;
             height: calc(100vh - 80px);
@@ -767,9 +696,8 @@ nav ul li a.active
             font-size: 13px;
         }
 
-        .heads
+        .text-main
         {
-            text-transform: uppercase;
             display: block;
             font-size: 2.2em;
             font-weight: 900;
@@ -778,7 +706,7 @@ nav ul li a.active
             bottom: 40px;
         }
      
-            .thai
+            .discilp
             {
                 top: 15px;
             }
@@ -788,7 +716,7 @@ nav ul li a.active
 
 @media screen and (max-width: 768px){
     .wrapper {
-        position: absolute;
+        position: relative;
         display: flex;
         width: 90%;
         height: calc(100vh - 80px);
@@ -798,9 +726,8 @@ nav ul li a.active
         overflow: hidden;
         font-size: 13px;
     }
-    .heads
+    .text-main
     {
-        text-transform: uppercase;
         display: block;
         font-size: 2.2em;
         font-weight: 900;
@@ -808,7 +735,7 @@ nav ul li a.active
         height: 100%;
         bottom: 40px;
     }
-        .thai
+        .discilp
         {
             top: 15px;
         }
@@ -819,7 +746,7 @@ nav ul li a.active
 
 @media screen and (max-width: 600px){
     .wrapper {
-        position: absolute;
+        position: relative;
         display: flex;
         width: 90%;
         height: calc(100vh - 80px);
@@ -830,9 +757,8 @@ nav ul li a.active
         font-size: 13px;
     }
 
-    .heads
+    .text-main
     {
-        text-transform: uppercase;
         display: block;
         font-size: 2.2em;
         font-weight: 900;
@@ -841,7 +767,7 @@ nav ul li a.active
         bottom: 40px;
     }
   
-        .thai
+        .discilp
         {
             top: 15px;
         }
@@ -850,14 +776,8 @@ nav ul li a.active
 
 
 @media screen and (max-width: 500px) {
-    .sec {
-        padding: 8%;
-        font-size: 15px;
-    }
-
-    .heads
+   .text-main
     {
-        text-transform: uppercase;
         display: block;
         font-size: 2.2em;
         font-weight: 900;
@@ -866,7 +786,7 @@ nav ul li a.active
         bottom: 40px;
     }
  
-        .thai
+        .discilp
         {
             bottom: 20px;
         }
@@ -875,7 +795,7 @@ nav ul li a.active
 
 @media screen and (max-width: 480px) {
     .wrapper {
-        position: absolute;
+        position: relative;
         display: flex;
         width: 90%;
         height: calc(100vh - 80px);
@@ -886,9 +806,8 @@ nav ul li a.active
         font-size: 13px;
     }
   
-    .heads
+    .text-main
     {
-        text-transform: uppercase;
         display: block;
         font-size: 1.6em;
         font-weight: 900;
@@ -900,7 +819,7 @@ nav ul li a.active
     {
         font-size: 3em;
     }
-        .thai
+        .discilp
         {
             top: 8px;
         }
@@ -910,7 +829,7 @@ nav ul li a.active
 
 @media screen and (max-width: 418px) {
     .wrapper {
-        position: absolute;
+        position: relative;
         width: 90%;
         height: 100%;
         justify-content: center;
@@ -919,7 +838,7 @@ nav ul li a.active
         overflow: hidden;
         font-size: 13px;
     }
-        .heads
+        .text-main
         {
             font-size: 25px;
         }
@@ -931,7 +850,7 @@ nav ul li a.active
 
 @media screen and (max-width: 360px) {
     .wrapper {
-        position: absolute;
+        position: relative;
         display: flex;
         width: 90%;
         height: 100vh;
@@ -941,13 +860,13 @@ nav ul li a.active
         overflow: hidden;
         font-size: 13px;
     }
-    .heads
+    .text-main
     {
         font-size: 23px;
     }
 
 
-    .thai
+    .discilp
     {
         font-size: 13px;
     }
@@ -964,9 +883,6 @@ nav ul li a.active
 @media only screen and (max-width: 320px) {
 
     .wrapper {
-        position: absolute;
-        display: flex;
-        width: 100%;
         height: calc(100vh - 80px);
         justify-content: center;
         align-items: center;
@@ -975,7 +891,8 @@ nav ul li a.active
         font-size: 13px;
     }
 
-    .heads {
+    .text-main
+     {
         width: 90%;
         font-size: 22px;
     }
@@ -990,9 +907,13 @@ nav ul li a.active
         height: 150vh;
         left: 40%;
     }
-
-    .thai
+    .glitch
     {
-        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .discilp
+    {
+        font-size: 10px;
     }
 }
