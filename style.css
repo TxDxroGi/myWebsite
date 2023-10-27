@@ -123,7 +123,7 @@ nav ul li a.active
         z-index: 999;
         width: 280px;
         height: 100vh;
-        background-color: #303030;
+        background-color: #111;
         transition: 1s;
         box-shadow: 2px 0 20px 0 rgba(255, 255, 255, 0.1);
     }
