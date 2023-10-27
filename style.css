@@ -311,7 +311,7 @@ nav ul li a.active
     position: relative;
     transform: translate(-50%, -50%);
     display: flex;
-    bottom: 30%;
+    bottom: 35%;
     left: 50%;
   }
 
