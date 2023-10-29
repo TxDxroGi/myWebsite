@@ -9,6 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@200;300;400;500;600;700;800;900&display=swap');
 *
 {
     margin: 0;
@@ -81,6 +82,7 @@ nav ul li a
     padding: 8px 18px;
     transition: 0.5s;
     border-radius: 30px;
+    font-family: 'Saira Semi Condensed', sans-serif;
 }
 nav ul li a:hover
 {
@@ -110,6 +112,17 @@ nav ul li a:hover
         width: 90%;
         padding: 0 20px;
     }
+    #text
+    {
+        display: none;
+    }
+    .logo
+    {
+        content: url(iconmx.png);
+        width: 60px;
+        margin-top: 50px;
+        background-image: none;
+    }
 
     nav 
     {
@@ -121,7 +134,7 @@ nav ul li a:hover
         height: 100vh;
         background-color:  #7d7d7d21;
         transition: 1s;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(30px);
         /* box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.522); */
     }
     #nav_check:checked ~ nav 
@@ -131,13 +144,13 @@ nav ul li a:hover
     nav .logo
     {
         display: block;
-        height: 70px;
         display: flex;
         align-items: center;
-        margin-left: 30px;
-        width: 25%;
-        background: #0000009f;
-        backdrop-filter: blur(1px);
+        margin-left: 40px;
+        margin-top: 30px;
+        width: 50px;
+        height: 50px;
+        background: #00000000;
     }
     nav ul li a 
     {
@@ -285,13 +298,15 @@ nav ul li a:hover
     width: 80%;   
     color: #fff;
     height: 100px;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     line-height: -5;
     text-shadow: 12px 10px 10px#000000;
+    text-transform: uppercase;
 }
 
 
-.container {
+.container
+{
     position: relative;
     transform: translate(-50%, -50%);
     display: flex;
@@ -579,12 +594,12 @@ nav ul li a:hover
 .about
 {
     background: rgb(155,219,221);
-    background: linear-gradient(324deg, rgba(155,219,221,1) 0%, rgba(43,59,85,1) 44%, rgba(9,11,14,1) 100%);
+    background: linear-gradient(324deg, rgba(155,219,221,1) 1%, rgba(43,59,85,1) 10%, rgba(9,11,14,1) 100%);
     position: absolute;
     height: 700vh;
     align-items: center;
     justify-content: center;
-    padding: 100px;
+    padding: 150px;
     margin: 0;
     overflow-x: hidden;
     width: 100%;
@@ -597,13 +612,14 @@ nav ul li a:hover
 }
 .about p
 {
-    font-size: 1.5em;
-    color: #939393;
+    margin-top: 30  px;
+    font-size: 1.3em;
+    color: #ffffff;
     font-weight: 500;
 }
 
 
-div .skill
+div .lang
 {
     width: 100%;
     color: #ffffffda;
@@ -616,58 +632,34 @@ div .skill
     background-image: linear-gradient(90deg, #8361ff, #01fffb);
     background-position: bottom ;
     background-size: 100% 3%;
-    height: 120px;
+    height: 150px;
     background-repeat: no-repeat;
     border-radius: 20px;
 }
 
-.logo-skill
+.logo-lang
 {
     margin: 0;
     padding: 0;
     text-align: center;
     font-size: 50px;
     padding: 2px 5px;
-    margin-top: 30px;
+    margin-top: 60px;
 }
-.logo-skill i
+.logo-lang i
 {
     margin: 0 20px;
+}
+
+
+.my-work
+{
+    margin-top: 70px;
 }
 
 /*------------------------------------Responsive--------------------------------------------*/
 
 
-
-
-
-
-/* @media screen and (max-width: 1600px) {
-    .wrapper {
-        position: absolute;
-        display: flex;
-        width: 90%;
-        height: calc(100vh - 80px);
-        justify-content: center;
-        align-items: center;
-        padding: 0 10%;
-        overflow: hidden;
-        font-size: 13px;
-    }
-    .text-main
-    {
-        display: block;
-        font-size: 2.5em;
-        font-weight: 900;
-        width: 80%;
-        height: 100%;
-        bottom: 40px;
-    }
-        .discilp
-        {
-            top: 15px;
-        }
-} */
 
 
 @media screen and (max-width: 1200px) {
@@ -692,11 +684,11 @@ div .skill
         height: 100%;
         bottom: 40px;
     }
-        .discilp
-        {
-            top: 15px;
-        }
 
+    .discilp
+    {
+        top: 15px;
+    }
 }
 
 /* --------------------------SCREEN 1024PX : IPad--------------------------- */
@@ -713,6 +705,7 @@ div .skill
         overflow: hidden;
         font-size: 13px;
     }
+
     .text-main
     {
         display: block;
@@ -722,11 +715,12 @@ div .skill
         height: 100%;
         bottom: 40px;
     }
-        .discilp
-        {
-            top: 15px;
-        }
+
+    .discilp
+    {
+        top: 15px;
     }
+}
 
 /* --------------------------SCREEN 900PX :--------------------------- */
 
@@ -750,10 +744,11 @@ div .skill
         height: 100%;
         bottom: 40px;
     }
-        .discilp
-        {
-            top: 15px;
-        }
+
+    .discilp
+    {
+        top: 15px;
+    }
 }
 /* --------------------------SCREEN 820PX : ipad mini--------------------------- */
 
@@ -779,15 +774,21 @@ div .skill
             height: 100%;
             bottom: 40px;
         }
-     
-            .discilp
-            {
-                top: 15px;
-            }
-            .logo-skill
-            {
-                font-size: 40px;
-            }
+
+        .about
+        {
+            padding: 100px;
+        }
+
+        .discilp
+        {
+            top: 15px;
+        }
+
+        .logo-lang
+        {
+            font-size: 40px;
+        }
     }
 
 /* --------------------------SCREEN 768PX : ipad mini--------------------------- */
@@ -804,6 +805,7 @@ div .skill
         overflow: hidden;
         font-size: 13px;
     }
+
     .text-main
     {
         display: block;
@@ -813,27 +815,33 @@ div .skill
         height: 100%;
         bottom: 40px;
     }
+
     .discilp
     {
         top: 15px;
     }
+
     .about
     {
         padding: 60px;
     }
+
     .about h2
     {
         font-size: 2em;
     }
+
     .about p
     {
         font-size: 1em;
     }
-    div .skill
+
+    div .lang
     {
         height: 50px;
     }
-    .logo-skill
+
+    .logo-lang
     {
         font-size: 30px;
     }
@@ -865,32 +873,38 @@ div .skill
         bottom: 40px;
     }
   
-        .discilp
-        {
-            top: 15px;
-        }
-        .about
-        {
-            padding: 50px;
-        }
+    .discilp
+    {
+        top: 15px;
+    }
+
+    .about
+    {
+        padding: 50px;
+    }
+
     .about h2
     {
         font-size: 2em;
     }
+
     .about p
     {
         font-size: 0.8em;
     }
-    div .logo-skill
+
+    div .logo-lang
     {
         height: 80px;
         padding: 10px;
     }
-    .logo-skill
+
+    .logo-lang
     {
         font-size: 23px;
     }
-    .logo-skill i 
+
+    .logo-lang i 
     {
         margin: 0 16px;
     }
@@ -909,11 +923,11 @@ div .skill
         bottom: 40px;
     }
  
-        .discilp
-        {
-            bottom: 20px;
-        }
+    .discilp
+    {
+        bottom: 20px;
     }
+}
 /* --------------------------SCREEN 480PX : BIG Phone--------------------------- */
 
 @media screen and (max-width: 480px) {
@@ -942,26 +956,30 @@ div .skill
     {
         font-size: 3em;
     }
-        .discilp
-        {
-            top: 8px;
-        }
-        div .skill
-        {
-            height: 50px;
-            padding: 10px;
-            background-size: 100% 5%;
-        }
-        .logo-skill
-        {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-        .logo-skill i
-        {
-            margin: 0 10px;
-        }
+
+    .discilp
+    {
+        top: 8px;
     }
+
+    div .lang
+    {
+        height: 50px;
+        padding: 10px;
+        background-size: 100% 5%;
+    }
+
+    .logo-lang
+    {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .logo-lang i
+    {
+        margin: 0 10px;
+    }
+}
 /* --------------------------SCREEN 418PX : BIG Phone--------------------------- */
 
 
@@ -992,7 +1010,7 @@ div .skill
         {
             font-size: 0.7em;
         }
-        .logo-skill i 
+        .logo-lang i 
         {
             margin: 0 9px;
         }
@@ -1040,17 +1058,17 @@ div .skill
     {
         font-size: 0.5em;
     }
-    div .skill
+    div .lang
     {
         height: 40px;
         background-size: 100% 5%;
     }
-    .logo-skill
+    .logo-lang
     {
         font-size: 18px;
         margin-top: 10px;
     }
-    .logo-skill i 
+    .logo-lang i 
     {
         margin: 0 5px;
     }
@@ -1094,17 +1112,17 @@ div .skill
     {
         font-size: 10px;
     }
-    div .skill
+    div .lang
     {
         height: 40px;
         background-size: 100% 5%;
     }
-    .logo-skill
+    .logo-lang
     {
         font-size: 18px;
         margin-top: 10px;
     }
-    .logo-skill i 
+    .logo-lang i 
     {
         margin: 0 5px;
     }
